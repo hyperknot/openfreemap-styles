@@ -35,20 +35,30 @@ def cli(styles_folder):
 
         print(f'formatting {style_file}')
 
-        remove_keys(style_file)
+        keep_original = '_orig.json' in style_file.name
 
-        # gl-style-migrate
-        p = subprocess.run(
-            [node_bin_path / 'gl-style-migrate', style_file], capture_output=True, text=True
-        )
-        with open(style_file, 'w') as fp:
-            fp.write(p.stdout)
+        if not keep_original:
+            # remove unneeded keys
+            remove_keys(style_file)
 
-        # prettier
-        subprocess.run(
-            [node_bin_path / 'prettier', '--config', prettier_config_path, '--write', style_file],
-            capture_output=True,
-        )
+            # gl-style-migrate
+            p = subprocess.run(
+                [node_bin_path / 'gl-style-migrate', style_file], capture_output=True, text=True
+            )
+            with open(style_file, 'w') as fp:
+                fp.write(p.stdout)
+
+            # prettier
+            subprocess.run(
+                [
+                    node_bin_path / 'prettier',
+                    '--config',
+                    prettier_config_path,
+                    '--write',
+                    style_file,
+                ],
+                capture_output=True,
+            )
 
         # gl-style-format
         p = subprocess.run(

@@ -420,14 +420,7 @@
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          1
-        ]
-      ],
+      "filter": ["all", ["==", "oneway", 1]],
       "layout": {
         "symbol-placement": "line",
         "icon-image": "oneway",
@@ -435,22 +428,9 @@
         "icon-padding": 2,
         "icon-rotation-alignment": "map",
         "icon-rotate": 0,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
+        "icon-size": {"stops": [[15, 0.5], [19, 1]]}
       },
-      "paint": {
-        "icon-opacity": 0.5
-      }
+      "paint": {"icon-opacity": 0.5}
     },
     {
       "id": "road_oneway_opposite",
@@ -458,14 +438,7 @@
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "==",
-          "oneway",
-          -1
-        ]
-      ],
+      "filter": ["all", ["==", "oneway", -1]],
       "layout": {
         "symbol-placement": "line",
         "icon-image": "oneway",
@@ -473,22 +446,9 @@
         "icon-padding": 2,
         "icon-rotation-alignment": "map",
         "icon-rotate": 180,
-        "icon-size": {
-          "stops": [
-            [
-              15,
-              0.5
-            ],
-            [
-              19,
-              1
-            ]
-          ]
-        }
+        "icon-size": {"stops": [[15, 0.5], [19, 1]]}
       },
-      "paint": {
-        "icon-opacity": 0.5
-      }
+      "paint": {"icon-opacity": 0.5}
     },
     {
       "id": "highway_motorway_subtle",
