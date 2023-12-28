@@ -11,3 +11,4 @@ rm -rf \
   .github
 
 cp style.json maputnik_orig.json
+cp style.json maputnik_orig_linted.json
