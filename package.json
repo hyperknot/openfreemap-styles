@@ -1,6 +1,10 @@
 {
+  "scripts": {
+    "compare": "five-server --open=compare"
+  },
   "dependencies": {
     "@maplibre/maplibre-gl-style-spec": "^19.3.3",
+    "five-server": "^0.3.1",
     "prettier": "^3.1.1",
     "prettier-plugin-sort-json": "^3.1.0"
   }
