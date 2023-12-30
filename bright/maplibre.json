@@ -300,28 +300,6 @@
       }
     },
     {
-      "id": "water-offset",
-      "type": "fill",
-      "metadata": {"mapbox:group": "1444849382550.77"},
-      "source": "openmaptiles",
-      "source-layer": "water",
-      "maxzoom": 8,
-      "filter": ["==", ["geometry-type"], "Polygon"],
-      "paint": {
-        "fill-color": "#a0c8f0",
-        "fill-opacity": 1,
-        "fill-translate": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          6,
-          ["literal", [2, 0]],
-          8,
-          ["literal", [0, 0]]
-        ]
-      }
-    },
-    {
       "id": "water",
       "type": "fill",
       "metadata": {"mapbox:group": "1444849382550.77"},
