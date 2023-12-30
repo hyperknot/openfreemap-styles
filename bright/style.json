@@ -2811,94 +2811,90 @@
       }
     },
     {
-      "id": "country_3",
+      "id": "label_country_3",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
+      "minzoom": 2,
+      "maxzoom": 9,
       "filter": [
         "all",
-        [">=", ["get", "rank"], 3],
-        ["==", ["get", "class"], "country"]
+        ["==", ["get", "class"], "country"],
+        [">=", ["get", "rank"], 3]
       ],
       "layout": {
-        "text-field": ["to-string", ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
+        "text-field": [
+          "concat",
+          ["get", "name_en"],
+          "\n",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Bold"],
         "text-max-width": 6.25,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 3, 11, 7, 17],
-        "text-transform": "none"
+        "text-size": ["interpolate", ["linear"], ["zoom"], 3, 9, 7, 17]
       },
       "paint": {
-        "text-color": "#334",
+        "text-color": "#000",
         "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-color": "#fff",
         "text-halo-width": 1
       }
     },
     {
-      "id": "country_2",
+      "id": "label_country_2",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
+      "maxzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "rank"], 2],
-        ["==", ["get", "class"], "country"]
+        ["==", ["get", "class"], "country"],
+        ["==", ["get", "rank"], 2]
       ],
       "layout": {
-        "text-field": ["to-string", ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
+        "text-field": [
+          "concat",
+          ["get", "name_en"],
+          "\n",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Bold"],
         "text-max-width": 6.25,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 2, 11, 5, 17],
-        "text-transform": "none"
+        "text-size": ["interpolate", ["linear"], ["zoom"], 2, 9, 5, 17]
       },
       "paint": {
-        "text-color": "#334",
+        "text-color": "#000",
         "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-color": "#fff",
         "text-halo-width": 1
       }
     },
     {
-      "id": "country_1",
+      "id": "label_country_1",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
+      "maxzoom": 9,
       "filter": [
         "all",
-        ["==", ["get", "rank"], 1],
-        ["==", ["get", "class"], "country"]
+        ["==", ["get", "class"], "country"],
+        ["==", ["get", "rank"], 1]
       ],
       "layout": {
-        "text-field": ["to-string", ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
+        "text-field": [
+          "concat",
+          ["get", "name_en"],
+          "\n",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Bold"],
         "text-max-width": 6.25,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 1, 11, 4, 17],
-        "text-transform": "none"
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1, 9, 4, 17]
       },
       "paint": {
-        "text-color": "#334",
+        "text-color": "#000",
         "text-halo-blur": 1,
-        "text-halo-color": "rgba(255,255,255,0.8)",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "continent",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "maxzoom": 1,
-      "filter": ["==", ["get", "class"], "continent"],
-      "layout": {
-        "text-field": ["to-string", ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
-        "text-justify": "center",
-        "text-size": 13,
-        "text-transform": "uppercase"
-      },
-      "paint": {
-        "text-color": "#633",
-        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-halo-color": "#fff",
         "text-halo-width": 1
       }
     }
