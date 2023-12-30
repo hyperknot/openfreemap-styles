@@ -1,3 +1,5 @@
 node_modules
 /.idea
 /compare
+/compare_old
+/tilejson
