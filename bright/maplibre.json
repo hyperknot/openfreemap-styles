@@ -38,7 +38,6 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": ["==", ["get", "subclass"], "glacier"],
-      "layout": {},
       "paint": {
         "fill-color": "#fff",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 0, 0.9, 10, 0.3]
@@ -116,7 +115,6 @@
       "source": "openmaptiles",
       "source-layer": "park",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "layout": {},
       "paint": {
         "line-color": [
           "interpolate",
@@ -309,7 +307,6 @@
       "source-layer": "water",
       "maxzoom": 8,
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "layout": {},
       "paint": {
         "fill-color": "#a0c8f0",
         "fill-opacity": 1,
@@ -330,7 +327,6 @@
       "metadata": {"mapbox:group": "1444849382550.77"},
       "source": "openmaptiles",
       "source-layer": "water",
-      "layout": {},
       "paint": {"fill-color": "hsl(210,67%,85%)"}
     },
     {
@@ -339,7 +335,6 @@
       "metadata": {"mapbox:group": "1444849382550.77"},
       "source": "openmaptiles",
       "source-layer": "water",
-      "layout": {},
       "paint": {"fill-pattern": "wave", "fill-translate": [0, 2.5]}
     },
     {
@@ -349,7 +344,6 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": ["==", ["get", "subclass"], "ice_shelf"],
-      "layout": {},
       "paint": {
         "fill-color": "#fff",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 0, 0.9, 10, 0.3]
@@ -362,7 +356,6 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": ["==", ["get", "class"], "sand"],
-      "layout": {},
       "paint": {"fill-color": "rgba(245, 238, 188, 1)", "fill-opacity": 1}
     },
     {
@@ -390,7 +383,6 @@
       "metadata": {"mapbox:group": "1444849364238.8171"},
       "source": "openmaptiles",
       "source-layer": "building",
-      "layout": {},
       "paint": {
         "fill-color": "#f2eae2",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0, 16, 1],
@@ -830,7 +822,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["runway", "taxiway"], true, false]
       ],
-      "layout": {},
       "paint": {
         "fill-color": "rgba(255, 255, 255, 1)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0, 14, 1]
@@ -893,7 +884,6 @@
     {
       "id": "road_area_pier",
       "type": "fill",
-      "metadata": {},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -901,13 +891,11 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "pier"]
       ],
-      "layout": {},
       "paint": {"fill-antialias": true, "fill-color": "#f8f4f0"}
     },
     {
       "id": "road_pier",
       "type": "line",
-      "metadata": {},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -940,7 +928,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["pier"], false, true]
       ],
-      "layout": {},
       "paint": {
         "fill-antialias": false,
         "fill-color": "hsla(0,0%,89%,0.56)",
@@ -1446,7 +1433,6 @@
           ["match", ["get", "brunnel"], ["tunnel"], false, true]
         ]
       ],
-      "layout": {},
       "paint": {
         "line-color": "hsla(0,0%,73%,0.77)",
         "line-width": [
@@ -1475,7 +1461,6 @@
           ["match", ["get", "brunnel"], ["tunnel"], false, true]
         ]
       ],
-      "layout": {},
       "paint": {
         "line-color": "hsla(0,0%,73%,0.68)",
         "line-dasharray": [0.2, 8],
@@ -1527,7 +1512,6 @@
         ["==", ["geometry-type"], "LineString"],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
-      "layout": {},
       "paint": {
         "line-color": "hsla(0,0%,73%,0.68)",
         "line-dasharray": [0.2, 8],
@@ -2641,8 +2625,7 @@
         "text-font": ["Noto Sans Regular"],
         "text-rotation-alignment": "viewport",
         "text-size": 10
-      },
-      "paint": {}
+      }
     },
     {
       "id": "highway-shield-us-interstate",

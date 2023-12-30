@@ -99,7 +99,7 @@ def clean_visibility(data):
 
 def clean_empty_values(data):
     for layer in data['layers']:
-        keys_to_delete = [k for k, v in layer if v == {}]
+        keys_to_delete = [k for k, v in layer.items() if v == {}]
         for k in keys_to_delete:
             del layer[k]
 

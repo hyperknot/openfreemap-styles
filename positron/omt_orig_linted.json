@@ -39,7 +39,6 @@
       "source": "openmaptiles",
       "source-layer": "park",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "layout": {},
       "paint": {"fill-color": "rgb(230, 233, 229)"}
     },
     {
@@ -52,7 +51,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["!=", ["get", "brunnel"], "tunnel"]
       ],
-      "layout": {},
       "paint": {"fill-antialias": true, "fill-color": "rgb(194, 200, 202)"}
     },
     {
@@ -66,7 +64,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "subclass"], "ice_shelf"]
       ],
-      "layout": {},
       "paint": {"fill-color": "hsl(0,0%,98%)", "fill-opacity": 0.7}
     },
     {
@@ -80,7 +77,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "subclass"], "glacier"]
       ],
-      "layout": {},
       "paint": {
         "fill-color": "hsl(0,0%,98%)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 8, 0.5]
@@ -97,7 +93,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "residential"]
       ],
-      "layout": {},
       "paint": {
         "fill-color": "rgb(234, 234, 230)",
         "fill-opacity": [
@@ -122,7 +117,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "wood"]
       ],
-      "layout": {},
       "paint": {
         "fill-color": "rgb(220,224,220)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 12, 1]
@@ -134,7 +128,6 @@
       "source": "openmaptiles",
       "source-layer": "waterway",
       "filter": ["==", ["geometry-type"], "LineString"],
-      "layout": {},
       "paint": {"line-color": "hsl(195,17%,78%)"}
     },
     {
@@ -298,7 +291,6 @@
         ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["runway", "taxiway"], true, false]
       ],
-      "layout": {},
       "paint": {
         "fill-color": "rgba(255, 255, 255, 1)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0, 14, 1]
@@ -334,7 +326,6 @@
     {
       "id": "road_area_pier",
       "type": "fill",
-      "metadata": {},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -342,13 +333,11 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "pier"]
       ],
-      "layout": {},
       "paint": {"fill-antialias": true, "fill-color": "rgb(242,243,240)"}
     },
     {
       "id": "road_pier",
       "type": "line",
-      "metadata": {},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
