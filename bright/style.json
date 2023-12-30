@@ -2564,43 +2564,207 @@
       }
     },
     {
-      "id": "road_label",
+      "id": "highway-name-path",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
-      "filter": ["all"],
+      "minzoom": 15.5,
+      "filter": ["==", ["get", "class"], "path"],
       "layout": {
         "symbol-placement": "line",
-        "text-anchor": "center",
-        "text-field": ["to-string", ["get", "name"]],
-        "text-font": ["Roboto Regular"],
-        "text-offset": [0, 0.15],
+        "text-field": [
+          "concat",
+          ["get", "name:latin"],
+          " ",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Regular"],
+        "text-rotation-alignment": "map",
         "text-size": ["interpolate", ["linear"], ["zoom"], 13, 12, 14, 13]
       },
       "paint": {
-        "text-color": "#765",
+        "text-color": "hsl(30,23%,62%)",
+        "text-halo-color": "#f8f4f0",
+        "text-halo-width": 0.5
+      }
+    },
+    {
+      "id": "highway-name-minor",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["==", ["geometry-type"], "LineString"],
+        ["match", ["get", "class"], ["minor", "service", "track"], true, false]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": [
+          "concat",
+          ["get", "name:latin"],
+          " ",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Regular"],
+        "text-rotation-alignment": "map",
+        "text-size": ["interpolate", ["linear"], ["zoom"], 13, 12, 14, 13]
+      },
+      "paint": {
+        "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-width": 1
       }
     },
     {
-      "id": "road_shield",
+      "id": "highway-name-major",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 12.2,
+      "filter": [
+        "match",
+        ["get", "class"],
+        ["primary", "secondary", "tertiary", "trunk"],
+        true,
+        false
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": [
+          "concat",
+          ["get", "name:latin"],
+          " ",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Regular"],
+        "text-rotation-alignment": "map",
+        "text-size": ["interpolate", ["linear"], ["zoom"], 13, 12, 14, 13]
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "highway-shield-non-us",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["<=", ["get", "ref_length"], 6],
+        ["==", ["geometry-type"], "LineString"],
+        [
+          "match",
+          ["get", "network"],
+          ["us-highway", "us-interstate", "us-state"],
+          false,
+          true
+        ]
+      ],
+      "layout": {
+        "icon-image": ["concat", "road_", ["get", "ref_length"]],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "symbol-placement": ["step", ["zoom"], "point", 11, "line"],
+        "symbol-spacing": 200,
+        "text-field": ["to-string", ["get", "ref"]],
+        "text-font": ["Noto Sans Regular"],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10
+      }
+    },
+    {
+      "id": "highway-shield-us-interstate",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
       "minzoom": 7,
-      "filter": ["<=", ["get", "ref_length"], 6],
+      "filter": [
+        "all",
+        ["<=", ["get", "ref_length"], 6],
+        ["==", ["geometry-type"], "LineString"],
+        ["match", ["get", "network"], ["us-interstate"], true, false]
+      ],
       "layout": {
-        "icon-image": ["concat", "default_", ["get", "ref_length"]],
+        "icon-image": [
+          "concat",
+          ["get", "network"],
+          "_",
+          ["get", "ref_length"]
+        ],
         "icon-rotation-alignment": "viewport",
-        "icon-size": 0.8,
-        "symbol-placement": ["step", ["zoom"], "point", 11, "line"],
-        "symbol-spacing": 500,
+        "icon-size": 1,
+        "symbol-placement": ["step", ["zoom"], "point", 7, "line", 8, "line"],
+        "symbol-spacing": 200,
         "text-field": ["to-string", ["get", "ref"]],
-        "text-font": ["Roboto Regular"],
-        "text-offset": [0, 0.1],
+        "text-font": ["Noto Sans Regular"],
         "text-rotation-alignment": "viewport",
         "text-size": 10
+      }
+    },
+    {
+      "id": "road_shield_us",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["<=", ["get", "ref_length"], 6],
+        ["==", ["geometry-type"], "LineString"],
+        ["match", ["get", "network"], ["us-highway", "us-state"], true, false]
+      ],
+      "layout": {
+        "icon-image": [
+          "concat",
+          ["get", "network"],
+          "_",
+          ["get", "ref_length"]
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "symbol-placement": ["step", ["zoom"], "point", 11, "line"],
+        "symbol-spacing": 200,
+        "text-field": ["to-string", ["get", "ref"]],
+        "text-font": ["Noto Sans Regular"],
+        "text-rotation-alignment": "viewport",
+        "text-size": 10
+      }
+    },
+    {
+      "id": "airport",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "aerodrome_label",
+      "minzoom": 10,
+      "filter": ["all", ["has", "iata"]],
+      "layout": {
+        "icon-image": "airport_11",
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": [
+          "concat",
+          ["get", "name:latin"],
+          "\n",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Regular"],
+        "text-max-width": 9,
+        "text-offset": [0, 0.6],
+        "text-optional": true,
+        "text-padding": 2,
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
       }
     },
     {
@@ -2713,6 +2877,34 @@
       }
     },
     {
+      "id": "label_state",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "minzoom": 5,
+      "maxzoom": 8,
+      "filter": ["==", ["get", "class"], "state"],
+      "layout": {
+        "text-field": [
+          "concat",
+          ["get", "name_en"],
+          "\n",
+          ["get", "name:nonlatin"]
+        ],
+        "text-font": ["Noto Sans Italic"],
+        "text-letter-spacing": 0.2,
+        "text-max-width": 9,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 8, 14],
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-color": "#333",
+        "text-halo-blur": 1,
+        "text-halo-color": "#fff",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "label_city",
       "type": "symbol",
       "source": "openmaptiles",
@@ -2797,34 +2989,6 @@
       },
       "paint": {
         "text-color": "#000",
-        "text-halo-blur": 1,
-        "text-halo-color": "#fff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "label_state",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "minzoom": 5,
-      "maxzoom": 8,
-      "filter": ["==", ["get", "class"], "state"],
-      "layout": {
-        "text-field": [
-          "concat",
-          ["get", "name_en"],
-          "\n",
-          ["get", "name:nonlatin"]
-        ],
-        "text-font": ["Noto Sans Italic"],
-        "text-letter-spacing": 0.2,
-        "text-max-width": 9,
-        "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 8, 14],
-        "text-transform": "uppercase"
-      },
-      "paint": {
-        "text-color": "#333",
         "text-halo-blur": 1,
         "text-halo-color": "#fff",
         "text-halo-width": 1
