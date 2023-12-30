@@ -12,7 +12,21 @@ This contains the forks of the following styles:
 
 All the OpenMapTiles styles (**Bright**, **Positron**, **Dark**) are abandoned by their upstream project. If you feel like maintaining the forks, please reach out!
 
-**Liberty** is still fresh and alive, we are only planning to add automatic / read-only changes to that one.
+**Liberty** is still fresh and alive. We aim to automatically patch Libery in the long term.
+
+---
+
+Some note about scripts:
+
+- **scripts/lint_styles.py** - removes unnecessary keys, runs gl-style-migrate, does recursive JSON sorting, outputs using gl-style-format and runs gl-style-validate
+- **lint.sh** does this for the whole repo, it should be used before every PR
+- **scripts/copy_text_fields.py** - copies all text fields from a source style to a destination style (and removes existing ones)
+
+
+
+
+
+
 
 ### License
 
