@@ -14,12 +14,3 @@ body {
   width: 100%;
 }
 
-#left {
-  background: red;
-  left: 0;
-}
-
-#right {
-  background: blue;
-  right: 0;
-}

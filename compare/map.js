@@ -17,5 +17,9 @@ export function setupMap(leftStyle, rightStyle) {
   window.leftMap = leftMap
   window.rightMap = rightMap
 
-  new maplibregl.Compare(leftMap, rightMap, '#compare', {})
+  window.compare = new maplibregl.Compare(leftMap, rightMap, '#compare', {
+    // mousemove: true,
+  })
+
+  rightMap.setZoom(leftMap.getZoom())
 }
