@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  overflow: hidden;
+}
+
+.map {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  width: 100%;
+}
+
+#left {
+  background: red;
+  left: 0;
+}
+
+#right {
+  background: blue;
+  right: 0;
+}

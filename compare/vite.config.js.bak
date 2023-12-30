@@ -1,0 +1,17 @@
+import { defineConfig } from 'vite'
+import path from 'path'
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      // Create an alias for the external directory
+      styles: path.resolve(__dirname, '..'),
+    },
+  },
+  server: {
+    fs: {
+      strict: false,
+      allow: ['..'],
+    },
+  },
+})
