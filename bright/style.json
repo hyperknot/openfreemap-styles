@@ -2733,13 +2733,16 @@
       "filter": ["==", ["get", "class"], "state"],
       "layout": {
         "text-field": ["to-string", ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 6, 15],
+        "text-font": ["Noto Sans Italic"],
+        "text-letter-spacing": 0.2,
+        "text-max-width": 9,
+        "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 8, 14],
         "text-transform": "uppercase"
       },
       "paint": {
-        "text-color": "#633",
-        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-color": "#333",
+        "text-halo-blur": 1,
+        "text-halo-color": "#fff",
         "text-halo-width": 1
       }
     },
