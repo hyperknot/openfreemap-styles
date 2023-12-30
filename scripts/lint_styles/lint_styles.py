@@ -38,8 +38,15 @@ def cli(styles_folder):
         keep_original = '_orig.json' in style_file.name
 
         if not keep_original:
-            # remove unneeded keys
-            remove_keys(style_file)
+            with open(style_file) as fp:
+                data = json.load(fp)
+
+            remove_root_keys(data)
+            clean_visibility(data)
+            clean_empty_values(data)
+
+            with open(style_file, 'w') as fp:
+                json.dump(data, fp, ensure_ascii=False)
 
             # gl-style-migrate
             p = subprocess.run(
@@ -76,15 +83,25 @@ def cli(styles_folder):
         )
 
 
-def remove_keys(style_file):
-    with open(style_file) as fp:
-        data = json.load(fp)
-
+def remove_root_keys(data):
     for key in ['id', 'center', 'zoom', 'bearing', 'pitch']:
         data.pop(key, None)
 
-    with open(style_file, 'w') as fp:
-        json.dump(data, fp, ensure_ascii=False)
+
+def clean_visibility(data):
+    for layer in data['layers']:
+        try:
+            if layer['layout']['visibility'] == 'visible':
+                del layer['layout']['visibility']
+        except KeyError:
+            pass
+
+
+def clean_empty_values(data):
+    for layer in data['layers']:
+        keys_to_delete = [k for k, v in layer if v == {}]
+        for k in keys_to_delete:
+            del layer[k]
 
 
 if __name__ == '__main__':

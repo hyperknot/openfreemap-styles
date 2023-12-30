@@ -39,7 +39,7 @@
       "source": "openmaptiles",
       "source-layer": "park",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {"fill-color": "rgb(230, 233, 229)"}
     },
     {
@@ -52,7 +52,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["!=", ["get", "brunnel"], "tunnel"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {"fill-antialias": true, "fill-color": "rgb(194, 200, 202)"}
     },
     {
@@ -66,7 +66,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "subclass"], "ice_shelf"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {"fill-color": "hsl(0,0%,98%)", "fill-opacity": 0.7}
     },
     {
@@ -80,7 +80,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "subclass"], "glacier"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {
         "fill-color": "hsl(0,0%,98%)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 8, 0.5]
@@ -97,7 +97,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "residential"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {
         "fill-color": "rgb(234, 234, 230)",
         "fill-opacity": [
@@ -122,7 +122,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "wood"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {
         "fill-color": "rgb(220,224,220)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 12, 1]
@@ -134,7 +134,7 @@
       "source": "openmaptiles",
       "source-layer": "waterway",
       "filter": ["==", ["geometry-type"], "LineString"],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {"line-color": "hsl(195,17%,78%)"}
     },
     {
@@ -191,11 +191,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "miter",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "butt", "line-join": "miter"},
       "paint": {
         "line-color": "rgb(213, 213, 213)",
         "line-opacity": 1,
@@ -228,11 +224,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "rgb(234,234,234)",
         "line-width": [
@@ -256,11 +248,7 @@
       "source-layer": "aeroway",
       "minzoom": 12,
       "filter": ["match", ["get", "class"], ["taxiway"], true, false],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsl(0,0%,88%)",
         "line-opacity": 1,
@@ -283,11 +271,7 @@
       "source-layer": "aeroway",
       "minzoom": 11,
       "filter": ["match", ["get", "class"], ["runway"], true, false],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsl(0,0%,88%)",
         "line-opacity": 1,
@@ -314,7 +298,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["runway", "taxiway"], true, false]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {
         "fill-color": "rgba(255, 255, 255, 1)",
         "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0, 14, 1]
@@ -332,11 +316,7 @@
         ["match", ["get", "class"], ["runway"], true, false],
         ["==", ["geometry-type"], "LineString"]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-opacity": 1,
@@ -362,7 +342,7 @@
         ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "pier"]
       ],
-      "layout": {"visibility": "visible"},
+      "layout": {},
       "paint": {"fill-antialias": true, "fill-color": "rgb(242,243,240)"}
     },
     {
@@ -401,11 +381,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["==", ["get", "class"], "path"]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "rgb(234, 234, 234)",
         "line-opacity": 0.9,
@@ -432,11 +408,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["match", ["get", "class"], ["minor", "service", "track"], true, false]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsl(0,0%,88%)",
         "line-opacity": 0.9,
@@ -469,11 +441,7 @@
           false
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "miter",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "butt", "line-join": "miter"},
       "paint": {
         "line-color": "rgb(213, 213, 213)",
         "line-dasharray": [12, 0],
@@ -506,11 +474,7 @@
           false
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "#fff",
         "line-width": [
@@ -542,11 +506,7 @@
           false
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {"line-color": "hsla(0,0%,85%,0.69)", "line-width": 2}
     },
     {
@@ -565,11 +525,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "miter",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "butt", "line-join": "miter"},
       "paint": {
         "line-color": "rgb(213, 213, 213)",
         "line-dasharray": [2, 0],
@@ -603,11 +559,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": [
           "interpolate",
@@ -643,11 +595,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["==", ["get", "class"], "motorway"]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsla(0,0%,85%,0.53)",
         "line-width": [
@@ -677,7 +625,7 @@
           ["match", ["get", "brunnel"], ["tunnel"], false, true]
         ]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {"line-color": "#dddddd", "line-width": 3}
     },
     {
@@ -696,7 +644,7 @@
           ["match", ["get", "brunnel"], ["tunnel"], false, true]
         ]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {
         "line-color": "#fafafa",
         "line-dasharray": [3, 3],
@@ -715,7 +663,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {"line-color": "#dddddd", "line-width": 3}
     },
     {
@@ -731,7 +679,7 @@
         ["==", ["get", "class"], "rail"],
         ["has", "service"]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {
         "line-color": "#fafafa",
         "line-dasharray": [3, 3],
@@ -750,7 +698,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["all", ["!", ["has", "service"]], ["==", ["get", "class"], "rail"]]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {
         "line-color": "#dddddd",
         "line-width": [
@@ -776,7 +724,7 @@
         ["==", ["geometry-type"], "LineString"],
         ["all", ["!", ["has", "service"]], ["==", ["get", "class"], "rail"]]
       ],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "layout": {"line-join": "round"},
       "paint": {
         "line-color": "#fafafa",
         "line-dasharray": [3, 3],
@@ -807,11 +755,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "butt",
-        "line-join": "miter",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "butt", "line-join": "miter"},
       "paint": {
         "line-color": "rgb(213, 213, 213)",
         "line-dasharray": [2, 0],
@@ -845,11 +789,7 @@
           ["==", ["get", "class"], "motorway"]
         ]
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": [
           "interpolate",
@@ -898,8 +838,7 @@
         "text-pitch-alignment": "viewport",
         "text-rotation-alignment": "map",
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "#bbb",
@@ -927,8 +866,7 @@
         "text-font": ["Metropolis Light", "Noto Sans Regular"],
         "text-pitch-alignment": "viewport",
         "text-rotation-alignment": "viewport",
-        "text-size": 10,
-        "visibility": "visible"
+        "text-size": 10
       },
       "paint": {
         "text-color": "rgb(117, 129, 145)",
@@ -945,11 +883,7 @@
       "source": "openmaptiles",
       "source-layer": "boundary",
       "filter": ["==", ["get", "admin_level"], 4],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
+      "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-blur": 0.4,
         "line-color": "rgb(230, 204, 207)",
@@ -1048,8 +982,7 @@
         "text-justify": "center",
         "text-offset": [0.5, 0],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgb(117, 129, 145)",
@@ -1082,8 +1015,7 @@
         "text-justify": "center",
         "text-offset": [0.5, 0],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgb(117, 129, 145)",
@@ -1117,8 +1049,7 @@
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "icon-opacity": 0.7,
@@ -1154,8 +1085,7 @@
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "icon-opacity": 0.7,
@@ -1196,8 +1126,7 @@
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "icon-opacity": 0.7,
@@ -1233,8 +1162,7 @@
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 14,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "icon-opacity": 0.7,
@@ -1275,8 +1203,7 @@
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 14,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "icon-opacity": 0.7,
@@ -1307,8 +1234,7 @@
         ],
         "text-font": ["Metropolis Regular", "Noto Sans Regular"],
         "text-size": 10,
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": "rgb(113, 129, 144)",
@@ -1334,8 +1260,7 @@
         "text-field": ["to-string", ["get", "name:latin"]],
         "text-font": ["Metropolis Light Italic", "Noto Sans Italic"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 0, 9, 6, 11],
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": [
@@ -1369,8 +1294,7 @@
         "text-field": ["to-string", ["get", "name:latin"]],
         "text-font": ["Metropolis Regular", "Noto Sans Regular"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 0, 10, 6, 12],
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": [
@@ -1415,8 +1339,7 @@
           4,
           14
         ],
-        "text-transform": "uppercase",
-        "visibility": "visible"
+        "text-transform": "uppercase"
       },
       "paint": {
         "text-color": [
