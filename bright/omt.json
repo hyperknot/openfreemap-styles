@@ -136,6 +136,25 @@
       "paint": {"fill-color": "hsla(30,19%,90%,0.4)"}
     },
     {
+      "id": "park",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "filter": ["==", ["geometry-type"], "Polygon"],
+      "paint": {
+        "fill-color": "#d8e8c8",
+        "fill-opacity": [
+          "interpolate",
+          ["exponential", 1.8],
+          ["zoom"],
+          9,
+          0.5,
+          12,
+          0.2
+        ]
+      }
+    },
+    {
       "id": "landcover-wood",
       "type": "fill",
       "metadata": {"mapbox:group": "1444849388993.3071"},
@@ -307,7 +326,7 @@
         "all",
         ["==", ["get", "class"], "river"],
         ["!=", ["get", "brunnel"], "tunnel"],
-        ["==", ["get", "intermittent"], 0]
+        ["!=", ["get", "intermittent"], 1]
       ],
       "layout": {"line-cap": "round"},
       "paint": {
