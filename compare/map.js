@@ -21,5 +21,5 @@ export function setupMap(leftStyle, rightStyle) {
     // mousemove: true,
   })
 
-  rightMap.setZoom(leftMap.getZoom())
+  // rightMap.setZoom(leftMap.getZoom())
 }
