@@ -403,16 +403,6 @@
       "paint": {"fill-color": "hsl(210,67%,85%)", "fill-opacity": 0.7}
     },
     {
-      "id": "water-pattern",
-      "type": "fill",
-      "metadata": {"mapbox:group": "1444849382550.77"},
-      "source": "openmaptiles",
-      "source-layer": "water",
-      "filter": ["all"],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-pattern": "wave", "fill-translate": [0, 2.5]}
-    },
-    {
       "id": "landcover-ice-shelf",
       "type": "fill",
       "metadata": {"mapbox:group": "1444849382550.77"},
