@@ -17,7 +17,7 @@ export async function loadStyle(url) {
 
     data.sprite = 'https://vt.maphub.net/static/sprites/bright/6112bc/sprite'
 
-    data.sources.openmaptiles.url = 'https://tiles.openfreemap.com/planet/20231221_134737_pt'
+    data.sources.openmaptiles.url = 'https://tiles.openfreemap.org/planet/20231221_134737_pt'
 
     for (const layer of data.layers) {
       delete layer.metadata

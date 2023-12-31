@@ -4,7 +4,20 @@ import './style.css'
 import { setupMap } from './map.js'
 import { loadStyle } from './style.js'
 
-const left = await loadStyle('/bright/omt.json', 'left')
-const right = await loadStyle('/bright/maphub.json', 'right')
+let left, right
+
+left = await loadStyle('/bright/style.json', 'left')
+right = await loadStyle('/bright/maphub.json', 'right')
+
+// left = await loadStyle('/dark/style.json', 'left')
+// right = await loadStyle('/dark/omt_orig_linted.json', 'right')
+
+// right = await loadStyle('/_stadia/osm_bright.json', 'right')
+
+// right = await loadStyle('/_maptiler/streets-v2.json', 'right')
+// right = await loadStyle('/_maptiler/dataviz-dark.json', 'right')
+// right = await loadStyle('/_maptiler/dataviz-light.json', 'right')
+// right = await loadStyle('/_maptiler/outdoor-v2.json', 'right')
+// right = await loadStyle('/_maptiler/basic-v2.json', 'right')
 
 setupMap(left, right)
