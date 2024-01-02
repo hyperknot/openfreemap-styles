@@ -25,21 +25,23 @@ if [ ! -d openmaptiles/_output ]; then
   # generate openmaptiles PBFs
   # needs old node version 12, using nvm
   (cd openmaptiles
-  source "$NVM_DIR/nvm.sh"
-  nvm use 12
-  npm i
-  node generate.js)
+    source "$NVM_DIR/nvm.sh"
+    nvm use 12
+    npm i
+    node generate.js)
 fi
 
 
 
 # re-generating protomaps fonts
-# broken currently, opened issue https://github.com/maplibre/font-maker/issues/31
+# currently not needed
 # brew install cmake boost
 # git_clone_or_update https://github.com/maplibre/font-maker.git fontmaker
-# cd fontmaker
-# cmake .
-# make
+# (cd fontmaker
+#   git submodule update --init
+#   cmake .
+#   make
+# )
 
 
 
