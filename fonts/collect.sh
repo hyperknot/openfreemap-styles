@@ -19,6 +19,29 @@ git_clone_or_update https://github.com/maplibre/demotiles.git maplibre
 git_clone_or_update https://github.com/openmaptiles/fonts.git openmaptiles
 git_clone_or_update https://github.com/protomaps/basemaps-assets.git protomaps
 
+
+
+# generate openmaptiles PBFs
+# needs old node version 12, using nvm
+(cd openmaptiles
+source "$NVM_DIR/nvm.sh"
+nvm use 12
+npm i
+node generate.js)
+
+
+
+# brew install cmake boost
+# git_clone_or_update https://github.com/maplibre/font-maker.git fontmaker
+# broken currently, opened issue https://github.com/maplibre/font-maker/issues/31
+# cd fontmaker
+# cmake .
+# make
+
 mkdir _collected
+
 cp -r maplibre/font _collected/maplibre
+cp -r protomaps/fonts _collected/protomaps
+
+
 
