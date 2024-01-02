@@ -33,13 +33,15 @@ fi
 
 
 
-
+# re-generating protomaps fonts
+# broken currently, opened issue https://github.com/maplibre/font-maker/issues/31
 # brew install cmake boost
 # git_clone_or_update https://github.com/maplibre/font-maker.git fontmaker
-# broken currently, opened issue https://github.com/maplibre/font-maker/issues/31
 # cd fontmaker
 # cmake .
 # make
+
+
 
 mkdir _collected
 
@@ -47,11 +49,17 @@ cp -r maplibre/font _collected/ml
 cp -r protomaps/fonts _collected/pm
 cp -r openmaptiles/_output _collected/omt
 
+
+
+# creating archive which should be replicatable across runs
+# needs GNU tar for --mtime (brew install gnu-tar)
 (cd _collected
- tar -czvf ml.tgz ml
-tar -czvf pm.tgz pm
-tar -czvf omt.tgz omt
-rm -rf ml pm omt
+  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf ml.tgz ml
+  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf pm.tgz pm
+  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf omt.tgz omt
+
+  rm -rf ml pm omt
+  md5 *.tgz
 )
 
 
