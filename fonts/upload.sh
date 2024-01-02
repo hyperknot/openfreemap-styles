@@ -10,6 +10,7 @@ fi
 
 
 rclone sync \
+  --checksum \
   --transfers=8 \
   --multi-thread-streams=8 \
   -vP \
