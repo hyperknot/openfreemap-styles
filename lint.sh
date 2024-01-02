@@ -3,4 +3,4 @@
 ruff check --fix .
 ruff format .
 
-scripts/lint_styles.py .
+scripts/lint_styles.py styles
