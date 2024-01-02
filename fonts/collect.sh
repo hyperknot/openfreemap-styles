@@ -16,18 +16,21 @@ git_clone_or_update() {
 rm -rf _collected
 
 git_clone_or_update https://github.com/maplibre/demotiles.git maplibre
-git_clone_or_update https://github.com/openmaptiles/fonts.git openmaptiles
 git_clone_or_update https://github.com/protomaps/basemaps-assets.git protomaps
 
 
+if [ ! -d openmaptiles/_output ]; then
+  git_clone_or_update https://github.com/openmaptiles/fonts.git openmaptiles
 
-# generate openmaptiles PBFs
-# needs old node version 12, using nvm
-(cd openmaptiles
-source "$NVM_DIR/nvm.sh"
-nvm use 12
-npm i
-node generate.js)
+  # generate openmaptiles PBFs
+  # needs old node version 12, using nvm
+  (cd openmaptiles
+  source "$NVM_DIR/nvm.sh"
+  nvm use 12
+  npm i
+  node generate.js)
+fi
+
 
 
 
@@ -40,8 +43,15 @@ node generate.js)
 
 mkdir _collected
 
-cp -r maplibre/font _collected/maplibre
-cp -r protomaps/fonts _collected/protomaps
+cp -r maplibre/font _collected/ml
+cp -r protomaps/fonts _collected/pm
+cp -r openmaptiles/_output _collected/omt
 
+(cd _collected
+ tar -czvf ml.tgz ml
+tar -czvf pm.tgz pm
+tar -czvf omt.tgz omt
+rm -rf ml pm omt
+)
 
 
