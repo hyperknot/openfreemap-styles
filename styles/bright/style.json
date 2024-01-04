@@ -2462,7 +2462,7 @@
         "text-size": ["interpolate", ["linear"], ["zoom"], 0, 10, 8, 14]
       },
       "paint": {
-        "text-color": "#2e5a80",
+        "text-color": "#495e91",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1.5
       }
@@ -2488,7 +2488,7 @@
         "text-size": 14
       },
       "paint": {
-        "text-color": "#2e5a80",
+        "text-color": "#495e91",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1.5
       }
