@@ -26,7 +26,7 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {"background-color": "rgb(239,239,239)"}
+      "paint": {"background-color": "#f8f4f0"}
     },
     {
       "id": "natural_earth",
