@@ -32,7 +32,7 @@
       "id": "natural_earth",
       "type": "raster",
       "source": "natural_earth_shaded_relief",
-      "maxzoom": 6,
+      "maxzoom": 7,
       "paint": {
         "raster-opacity": [
           "interpolate",
