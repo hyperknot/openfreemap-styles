@@ -2000,7 +2000,8 @@
       "filter": [
         "all",
         ["==", ["get", "admin_level"], 2],
-        ["!", ["has", "claimed_by"]]
+        ["!", ["has", "claimed_by"]],
+        ["!=", ["get", "maritime"], 1]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -2015,7 +2016,11 @@
       "source": "openmaptiles",
       "source-layer": "boundary",
       "minzoom": 5,
-      "filter": ["==", ["get", "admin_level"], 2],
+      "filter": [
+        "all",
+        ["==", ["get", "admin_level"], 2],
+        ["!=", ["get", "maritime"], 1]
+      ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsl(248,1%,41%)",
