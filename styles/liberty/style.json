@@ -71,7 +71,7 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "landuse",
-      "maxzoom": 8,
+      "maxzoom": 12,
       "filter": ["==", ["get", "class"], "residential"],
       "paint": {
         "fill-color": [

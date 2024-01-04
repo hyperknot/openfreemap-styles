@@ -6,8 +6,11 @@ import { loadStyle } from './style.js'
 
 let left, right
 
-left = await loadStyle('/styles/bright/style.json', 'left')
-right = await loadStyle('/styles/bright/maphub.json', 'right')
+// left = await loadStyle('/styles/bright/style.json', 'left')
+// right = await loadStyle('/styles/bright/maphub.json', 'right')
+
+left = await loadStyle('/styles/liberty/style.json', 'left')
+right = await loadStyle('/styles/liberty/maphub.json', 'right')
 
 // left = await loadStyle('/dark/style.json', 'left')
 // right = await loadStyle('/dark/omt_orig_linted.json', 'right')
