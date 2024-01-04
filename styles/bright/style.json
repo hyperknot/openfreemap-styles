@@ -52,7 +52,7 @@
       "filter": [
         "match",
         ["get", "class"],
-        ["neighbourhood", "residential", "suburb"],
+        ["neighbourhood", "residential"],
         true,
         false
       ],
@@ -65,6 +65,25 @@
           "hsla(30,19%,90%,0.4)",
           16,
           "hsla(30,19%,90%,0.2)"
+        ]
+      }
+    },
+    {
+      "id": "landuse-suburb",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "maxzoom": 10,
+      "filter": ["==", ["get", "class"], "suburb"],
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          8,
+          "hsla(30,19%,90%,0.4)",
+          10,
+          "hsla(30,19%,90%,0.0)"
         ]
       }
     },
