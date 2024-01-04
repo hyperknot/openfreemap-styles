@@ -777,13 +777,13 @@
       }
     },
     {
-      "id": "boundary_state",
+      "id": "boundary_3",
       "type": "line",
-      "metadata": {"mapbox:group": "a14c9607bc7954ba1df7205bf660433f"},
       "source": "openmaptiles",
       "source-layer": "boundary",
-      "filter": ["==", ["get", "admin_level"], 4],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "minzoom": 8,
+      "filter": ["match", ["get", "admin_level"], [3, 4], true, false],
+      "layout": {"line-join": "round"},
       "paint": {
         "line-blur": 0.4,
         "line-color": "rgb(230, 204, 207)",
@@ -801,16 +801,16 @@
       }
     },
     {
-      "id": "boundary_country_z0-4",
+      "id": "boundary_2_z0-4",
       "type": "line",
-      "metadata": {"mapbox:group": "a14c9607bc7954ba1df7205bf660433f"},
       "source": "openmaptiles",
       "source-layer": "boundary",
       "maxzoom": 5,
       "filter": [
         "all",
         ["==", ["get", "admin_level"], 2],
-        ["!", ["has", "claimed_by"]]
+        ["!", ["has", "claimed_by"]],
+        ["!=", ["get", "maritime"], 1]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -829,13 +829,16 @@
       }
     },
     {
-      "id": "boundary_country_z5-",
+      "id": "boundary_2_z5-",
       "type": "line",
-      "metadata": {"mapbox:group": "a14c9607bc7954ba1df7205bf660433f"},
       "source": "openmaptiles",
       "source-layer": "boundary",
       "minzoom": 5,
-      "filter": ["==", ["get", "admin_level"], 2],
+      "filter": [
+        "all",
+        ["==", ["get", "admin_level"], 2],
+        ["!=", ["get", "maritime"], 1]
+      ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-blur": ["interpolate", ["linear"], ["zoom"], 0, 0.4, 22, 4],
