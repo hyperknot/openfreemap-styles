@@ -11,13 +11,13 @@ export async function loadStyle(url) {
   delete data.id
 
   if (url.startsWith('/')) {
-    data.glyphs = 'https://vt.maphub.net/static/fonts/57252b/{fontstack}/{range}.pbf'
-    // data.glyphs = "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf"
-    // data.glyphs = "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf"
-
     data.sprite = 'https://vt.maphub.net/static/sprites/bright/6112bc/sprite'
 
-    data.sources.openmaptiles.url = 'https://tiles.openfreemap.org/planet/20231221_134737_pt'
+    data.glyphs = 'https://tiles.openfreemap.org/fonts/omt/{fontstack}/{range}.pbf'
+    // data.glyphs = 'https://tiles.openfreemap.org/fonts/ml/{fontstack}/{range}.pbf'
+    // data.glyphs = 'https://tiles.openfreemap.org/fonts/pm/{fontstack}/{range}.pbf'
+
+    data.sources.openmaptiles.url = 'https://tiles.openfreemap.org/planet'
 
     for (const layer of data.layers) {
       delete layer.metadata
