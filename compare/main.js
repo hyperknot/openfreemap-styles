@@ -6,9 +6,8 @@ import { loadStyle } from './style.js'
 
 let left, right
 
-left = await loadStyle('/styles/bright/style.json', 'left')
-
-right = await loadStyle('/styles/liberty/style.json', 'left')
+left = await loadStyle('/styles/bright/style_underscore.json', 'left')
+right = await loadStyle('/styles/bright/style_colon.json', 'left')
 
 // left = await loadStyle('/styles/positron/style.json', 'right')
 // right = await loadStyle('/styles/positron/omt_orig_linted.json', 'right')

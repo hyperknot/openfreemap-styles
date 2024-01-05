@@ -22,8 +22,6 @@ def cli(style_path):
         if 'layout' not in layer:
             continue
 
-        print()
-
         text_field = layer['layout'].get('text-field')
         if not text_field:
             continue
@@ -31,11 +29,20 @@ def cli(style_path):
         if text_field == ['to-string', ['get', 'ref']]:
             continue
 
-        print(layer['id'])
-        print(text_field)
+        id_ = layer['id']
+        if 'line' in id_ or 'highway' in id_:
+            separator = ' '
+        else:
+            separator = '\n'
 
-    # with open(style_path, 'w') as fp:
-    #     json.dump(style, fp, ensure_ascii=False)
+        layer['layout']['text-field'] = [
+            'case',
+            ['has', 'name:nonlatin'],
+            ['concat', ['get', 'name:latin'], f'{separator}(', ['get', 'name:nonlatin'], ')'],
+            ['coalesce', ['get', 'name_en'], ['get', 'name']],
+        ]
+    with open(style_path, 'w') as fp:
+        json.dump(style, fp, ensure_ascii=False)
 
 
 if __name__ == '__main__':
