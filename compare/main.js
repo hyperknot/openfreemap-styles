@@ -6,21 +6,13 @@ import { loadStyle } from './style.js'
 
 let left, right
 
-left = await loadStyle('/styles/bright/style_underscore.json', 'left')
-right = await loadStyle('/styles/bright/style_colon.json', 'left')
+left = await loadStyle('/styles/bright/style.json')
+right = await loadStyle('/styles/liberty/style.json')
 
-// left = await loadStyle('/styles/positron/style.json', 'right')
-// right = await loadStyle('/styles/positron/omt_orig_linted.json', 'right')
+// left = await loadStyle('/styles/positron/style.json')
+// right = await loadStyle('/styles/positron/omt_orig_linted.json')
 
-// right = await loadStyle('/styles/dark/style.json', 'right')
-// right = await loadStyle('/dark/omt_orig_linted.json', 'right')
-
-// right = await loadStyle('/_stadia/osm_bright.json', 'right')
-
-// right = await loadStyle('/_maptiler/streets-v2.json', 'right')
-// right = await loadStyle('/_maptiler/dataviz-dark.json', 'right')
-// right = await loadStyle('/_maptiler/dataviz-light.json', 'right')
-// right = await loadStyle('/_maptiler/outdoor-v2.json', 'right')
-// right = await loadStyle('/_maptiler/basic-v2.json', 'right')
+// right = await loadStyle('/styles/dark/style.json')
+// right = await loadStyle('/dark/omt_orig_linted.json')
 
 setupMap(left, right)

@@ -38,7 +38,7 @@ def cli(style_path):
         layer['layout']['text-field'] = [
             'case',
             ['has', 'name:nonlatin'],
-            ['concat', ['get', 'name:latin'], f'{separator}(', ['get', 'name:nonlatin'], ')'],
+            ['concat', ['get', 'name:latin'], separator, ['get', 'name:nonlatin']],
             ['coalesce', ['get', 'name_en'], ['get', 'name']],
         ]
     with open(style_path, 'w') as fp:

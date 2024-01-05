@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-./fix_text_fields.py ../styles/bright/style_underscore.json
+./fix_text_fields.py ../styles/bright/style.json
 #./fix_text_fields.py ../styles/bright/style_colon.json
 
 #./fix_text_fields.py ../styles/bright/maphub.json > maphub
