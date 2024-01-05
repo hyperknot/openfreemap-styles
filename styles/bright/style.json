@@ -2258,7 +2258,7 @@
       }
     },
     {
-      "id": "boundary-land-level-4",
+      "id": "boundary_3",
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "boundary",
@@ -2266,53 +2266,35 @@
       "filter": [
         "all",
         [">=", ["get", "admin_level"], 3],
-        ["<=", ["get", "admin_level"], 8],
-        ["!=", ["get", "maritime"], 1]
+        ["<=", ["get", "admin_level"], 6],
+        ["!=", ["get", "maritime"], 1],
+        ["!=", ["get", "disputed"], 1],
+        ["!", ["has", "claimed_by"]]
       ],
-      "layout": {"line-join": "round"},
       "paint": {
-        "line-color": "#9e9cab",
-        "line-dasharray": [3, 1, 1, 1],
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.4],
-          ["zoom"],
-          4,
-          0.4,
-          5,
-          1,
-          12,
-          3
-        ]
+        "line-color": "hsl(0,0%,70%)",
+        "line-dasharray": [1, 1],
+        "line-width": ["interpolate", ["linear", 1], ["zoom"], 7, 1, 11, 2]
       }
     },
     {
-      "id": "boundary-land-level-2",
+      "id": "boundary_2_z0-4",
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "boundary",
+      "maxzoom": 5,
       "filter": [
         "all",
         ["==", ["get", "admin_level"], 2],
         ["!=", ["get", "maritime"], 1],
-        ["!=", ["get", "disputed"], 1]
+        ["!=", ["get", "disputed"], 1],
+        ["!", ["has", "claimed_by"]]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
         "line-color": "hsl(248,7%,66%)",
-        "line-width": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          0,
-          0.6,
-          4,
-          1.4,
-          5,
-          2,
-          12,
-          8
-        ]
+        "line-opacity": ["interpolate", ["linear"], ["zoom"], 0, 0.4, 4, 1],
+        "line-width": ["interpolate", ["linear"], ["zoom"], 3, 1, 5, 1.2, 12, 3]
       }
     },
     {
