@@ -2262,7 +2262,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "boundary",
-      "minzoom": 7,
+      "minzoom": 5,
       "filter": [
         "all",
         [">=", ["get", "admin_level"], 3],
