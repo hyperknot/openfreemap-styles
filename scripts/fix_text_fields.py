@@ -22,11 +22,20 @@ def cli(style_path):
         if 'layout' not in layer:
             continue
 
-        if 'text-field' in layer['layout']:
-            print(layer['layout']['text-field'])
+        print()
 
-    with open(style_path, 'w') as fp:
-        json.dump(style, fp, ensure_ascii=False)
+        text_field = layer['layout'].get('text-field')
+        if not text_field:
+            continue
+
+        if text_field == ['to-string', ['get', 'ref']]:
+            continue
+
+        print(layer['id'])
+        print(text_field)
+
+    # with open(style_path, 'w') as fp:
+    #     json.dump(style, fp, ensure_ascii=False)
 
 
 if __name__ == '__main__':
