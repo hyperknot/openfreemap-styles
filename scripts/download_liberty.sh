@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
-rm -rf ../liberty
-git clone https://github.com/maputnik/osm-liberty.git ../liberty --depth=1
+rm -rf ../styles/liberty
+git clone https://github.com/maputnik/osm-liberty.git ../styles/liberty --depth=1
 
-cd ../liberty
+cd ../styles/liberty
 
 rm -rf \
   .git \
-  .github
+  .github \
+  demo \
+  thumbnail.png \
+  package*.json \
+  logo.png \
+  .gitignore \
+  _config.yml
 
-cp style.json maputnik_orig.json
+
 cp style.json maputnik_orig_linted.json
