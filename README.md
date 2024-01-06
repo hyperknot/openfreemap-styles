@@ -66,3 +66,5 @@ Each style have their license in their subfolder.
 Code in this repo is MIT licensed.
 
 Fonts are not stored in this repo, their license should be the one in their original repo.
+
+Spritezero-cli is forked from https://github.com/mapbox/spritezero-cli, license is included.
