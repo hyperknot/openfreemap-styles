@@ -11,7 +11,7 @@ export async function loadStyle(url) {
   delete data.id
 
   if (url.startsWith('/')) {
-    data.sprite = 'https://vt.maphub.net/static/sprites/bright/6112bc/sprite'
+    data.sprite = window.location.origin + '/sprites/ofm_f384/ofm'
 
     data.glyphs = 'https://tiles.openfreemap.org/fonts/omt/{fontstack}/{range}.pbf'
     // data.glyphs = 'https://tiles.openfreemap.org/fonts/ml/{fontstack}/{range}.pbf'
