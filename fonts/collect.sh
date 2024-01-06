@@ -18,7 +18,7 @@ rm -rf _collected
 git_clone_or_update https://github.com/maplibre/demotiles.git maplibre
 
 
-mkdir -p _collected/omt
+mkdir -p _collected/ofm
 
-cp -r maplibre/font/Noto* _collected/omt
+cp -r maplibre/font/Noto* _collected/ofm
 
