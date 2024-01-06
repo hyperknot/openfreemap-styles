@@ -14,7 +14,9 @@ rm -rf \
   package*.json \
   logo.png \
   .gitignore \
-  _config.yml
+  _config.yml \
+  sprites \
+  build_sprites.sh \
 
 
 cp style.json maputnik_orig_linted.json
