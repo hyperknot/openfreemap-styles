@@ -1,0 +1,44 @@
+# get from styles command:
+# shopt -s globstar; jq -c '.. | objects | ."text-font"? | select(.)' **/*.json | sort | uniq
+# + hand processing
+
+Open Sans Bold
+Open Sans Bold Italic
+Open Sans Extra Bold
+Open Sans Extra Bold Italic
+Open Sans Italic
+Open Sans Light
+Open Sans Light Italic
+Open Sans Regular
+Open Sans Semibold
+Open Sans Semibold Italic
+
+Noto Sans Bold
+Noto Sans Italic
+Noto Sans Regular
+
+PT Sans Bold
+PT Sans Italic
+PT Sans Narrow Regular
+
+Roboto Bold
+Roboto Condensed Bold
+Roboto Condensed Italic
+Roboto Condensed Regular
+Roboto Italic
+Roboto Medium
+Roboto Medium Italic
+Roboto Regular
+
+# not in font stack
+Inter Bold
+Inter Italic
+Inter Regular
+
+# not covering unicode
+Metropolis Light
+Metropolis Light Italic
+Metropolis Medium Italic
+Metropolis Regular
+Metropolis Semi Bold
+Metropolis Semi Bold Italic

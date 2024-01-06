@@ -853,7 +853,7 @@
         "text-size": 14
       },
       "paint": {
-        "text-color": "#74aee9",
+        "text-color": "hsl(0, 0%, 66%)",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1.5
       }
