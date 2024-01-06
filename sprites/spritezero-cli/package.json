@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@mapbox/spritezero": "^8.0.3"
+    "@mapbox/spritezero": "^8.0.3",
+    "minimist": "^1.2.8",
+    "multiline": "^2.0.0"
   }
 }
