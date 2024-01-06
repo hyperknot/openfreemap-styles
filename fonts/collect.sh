@@ -52,16 +52,3 @@ cp -r protomaps/fonts _collected/pm
 cp -r openmaptiles/_output _collected/omt
 
 
-
-# creating archive which should be replicatable across runs
-# needs GNU tar for --mtime (brew install gnu-tar)
-(cd _collected
-  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf ml.tgz ml
-  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf pm.tgz pm
-  GZIP=-n gtar --sort=name --mtime=0 --owner=0 --group=0 -czf omt.tgz omt
-
-  rm -rf ml pm omt
-  md5 *.tgz
-)
-
-
