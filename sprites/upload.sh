@@ -15,7 +15,7 @@ fi
   for folder in */; do
     base=$(basename "$folder")
     echo $base
-    GZIP=-n gtar --sort=name --mtime='1970-01-01' --owner=0 --group=0 -czf "${base}.tgz" "${base}"
+    GZIP=-n gtar --sort=name --mtime='2000-01-01' --owner=0 --group=0 -czf "${base}.tgz" "${base}"
   done
   md5 *.tgz
 )
