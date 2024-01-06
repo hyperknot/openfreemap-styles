@@ -24,23 +24,15 @@ The following is done, meaning they are identical, only differing in colors.
 - country and administrative borders
 - POIs
 
-**Dark** is currently put on hold. Later I'll try a different approach to make an inverted Positron.
+**Positron**, as a special clean looking style also has POIs removed and some highway labels set to show at higher zooms only.
+
+**Dark** is currently put on hold, it's very different from the rest. I think a better approach would be to try to invert Positron in a fitting color space.
 
 
 
 ### Compare
 
 Part of this repo is a compare web app. Currently it works on localhost, but in the future there'll be a web hosted version with a nicer GUI. The point of compare is to compare different styles and different data sources.
-
-
-
-### Fonts
-
-The following font repos are downloaded and complied where needed. They are not stored in this repo.
-
-https://github.com/maplibre/demotiles
-https://github.com/protomaps/basemaps-assets
-https://github.com/openmaptiles/fonts
 
 
 

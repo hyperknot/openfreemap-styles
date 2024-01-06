@@ -15,10 +15,8 @@ mkdir _collected_gzip
 # creating archive which should be replicatable across runs
 # needs GNU tar for --mtime (brew install gnu-tar)
 (cd _collected
-  GZIP=-n gtar --sort=name --mtime='2000-01-01' --owner=0 --group=0 -czf ../_collected_gzip/ml.tgz ml
-  GZIP=-n gtar --sort=name --mtime='2000-01-01' --owner=0 --group=0 -czf ../_collected_gzip/pm.tgz pm
-  GZIP=-n gtar --sort=name --mtime='2000-01-01' --owner=0 --group=0 -czf ../_collected_gzip/omt.tgz omt
-  md5 ../_collected_gzip/*.tgz
+  GZIP=-n gtar --sort=name --mtime='2000-01-01' --owner=0 --group=0 -czf ../_collected_gzip/omt.tar.gz omt
+  md5 ../_collected_gzip/*.tar.gz
 )
 
 

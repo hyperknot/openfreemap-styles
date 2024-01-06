@@ -16,39 +16,9 @@ git_clone_or_update() {
 rm -rf _collected
 
 git_clone_or_update https://github.com/maplibre/demotiles.git maplibre
-git_clone_or_update https://github.com/protomaps/basemaps-assets.git protomaps
 
 
-if [ ! -d openmaptiles/_output ]; then
-  git_clone_or_update https://github.com/openmaptiles/fonts.git openmaptiles
+mkdir -p _collected/omt
 
-  # generate openmaptiles PBFs
-  # needs old node version 12, using nvm
-  (cd openmaptiles
-    source "$NVM_DIR/nvm.sh"
-    nvm use 12
-    npm i
-    node generate.js)
-fi
-
-
-
-# re-generating protomaps fonts
-# currently not needed
-# brew install cmake boost
-# git_clone_or_update https://github.com/maplibre/font-maker.git fontmaker
-# (cd fontmaker
-#   git submodule update --init
-#   cmake .
-#   make
-# )
-
-
-
-mkdir _collected
-
-cp -r maplibre/font _collected/ml
-cp -r protomaps/fonts _collected/pm
-cp -r openmaptiles/_output _collected/omt
-
+cp -r maplibre/font/Noto* _collected/omt
 
