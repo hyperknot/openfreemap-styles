@@ -19,13 +19,18 @@ export async function loadStyle(url) {
 
     data.sources.openmaptiles.url = 'https://tiles.openfreemap.org/planet'
 
+    let font
+    // font = 'Open Sans Regular'
+    font = 'Noto Sans Regular'
+    // font = 'Roboto Regular'
+
     for (const layer of data.layers) {
       delete layer.metadata
 
       const layout = layer.layout
 
       if (layout?.['text-font']) {
-        layout['text-font'] = ['Open Sans Regular']
+        // layout['text-font'] = [font]
       }
 
       // if (layout?.visibility === 'visible') {
