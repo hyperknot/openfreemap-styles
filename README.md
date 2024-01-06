@@ -53,6 +53,12 @@ https://github.com/openmaptiles/fonts
 
 
 
+#### Node version
+
+Most tools used work on recent node versions, but fonts and sprites use tools which require node 12.
+
+
+
 ### License
 
 Each style have their license in their subfolder.

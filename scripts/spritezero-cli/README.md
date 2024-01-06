@@ -8,6 +8,3 @@ With nvm, install it with:
 nvm use 12
 npm i
 ```
-
-
-
