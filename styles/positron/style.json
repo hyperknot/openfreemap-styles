@@ -1,7 +1,6 @@
 {
   "version": 8,
   "metadata": {
-    "mapbox:autocomposite": false,
     "mapbox:groups": {
       "101da9f13b64a08fa4b6ac1168e89e5f": {
         "collapsed": false,
@@ -12,11 +11,7 @@
         "collapsed": false,
         "name": "Transportation"
       }
-    },
-    "mapbox:type": "template",
-    "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
-    "openmaptiles:version": "3.x"
+    }
   },
   "sources": {
     "natural_earth": {

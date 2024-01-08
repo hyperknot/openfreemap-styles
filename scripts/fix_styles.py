@@ -12,13 +12,19 @@ import click
 )
 def cli(style_path):
     """
-    Fixes text-fields in styles
+    Fixes OFM specific values in styles
     """
 
     with open(style_path) as fp:
         style = json.load(fp)
 
     style.pop('name', None)
+
+    # clean up metadata
+    try:
+        style['metadata'] = {'mapbox:groups': style['metadata']['mapbox:groups']}
+    except KeyError:
+        style.pop('metadata', None)
 
     style['sources'] = {
         'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},

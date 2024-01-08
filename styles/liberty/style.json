@@ -1,10 +1,5 @@
 {
   "version": 8,
-  "metadata": {
-    "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
-    "maputnik:renderer": "mbgljs",
-    "openmaptiles:version": "3.x"
-  },
   "sources": {
     "natural_earth": {
       "maxzoom": 6,
