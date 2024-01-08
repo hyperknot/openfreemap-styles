@@ -1,6 +1,5 @@
 {
   "version": 8,
-  "name": "OSM Bright",
   "metadata": {
     "mapbox:autocomposite": false,
     "mapbox:groups": {

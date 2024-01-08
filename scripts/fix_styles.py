@@ -18,6 +18,8 @@ def cli(style_path):
     with open(style_path) as fp:
         style = json.load(fp)
 
+    style.pop('name', None)
+
     style['sources'] = {
         'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},
         'natural_earth': {
