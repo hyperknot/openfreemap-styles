@@ -18,6 +18,19 @@ def cli(style_path):
     with open(style_path) as fp:
         style = json.load(fp)
 
+    style['sources'] = {
+        'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},
+        'natural_earth': {
+            'maxzoom': 6,
+            'tileSize': 256,
+            'tiles': [
+                'https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png'
+            ],
+            'type': 'raster',
+        },
+    }
+    style['glyphs'] = 'https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf'
+
     for layer in style['layers']:
         if 'layout' not in layer:
             continue

@@ -20,9 +20,17 @@
     "openmaptiles:version": "3.x"
   },
   "sources": {
+    "natural_earth": {
+      "maxzoom": 6,
+      "tileSize": 256,
+      "tiles": [
+        "https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
+      ],
+      "type": "raster"
+    },
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+      "url": "https://tiles.openfreemap.org/planet"
     }
   },
   "sprite": "https://openmaptiles.github.io/dark-matter-gl-style/sprite",

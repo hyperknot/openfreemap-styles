@@ -20,13 +20,21 @@
     "openmaptiles:version": "3.x"
   },
   "sources": {
+    "natural_earth": {
+      "maxzoom": 6,
+      "tileSize": 256,
+      "tiles": [
+        "https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
+      ],
+      "type": "raster"
+    },
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+      "url": "https://tiles.openfreemap.org/planet"
     }
   },
   "sprite": "https://openmaptiles.github.io/positron-gl-style/sprite",
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "glyphs": "https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -853,7 +861,7 @@
         "text-size": 14
       },
       "paint": {
-        "text-color": "hsl(0, 0%, 66%)",
+        "text-color": "hsl(0,0%,66%)",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1.5
       }

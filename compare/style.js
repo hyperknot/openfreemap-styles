@@ -13,25 +13,14 @@ export async function loadStyle(url) {
   if (url.startsWith('/')) {
     data.sprite = window.location.origin + '/sprites/ofm_f384/ofm'
 
-    data.glyphs = 'https://tiles.openfreemap.org/fonts/omt/{fontstack}/{range}.pbf'
-    // data.glyphs = 'https://tiles.openfreemap.org/fonts/ml/{fontstack}/{range}.pbf'
-    // data.glyphs = 'https://tiles.openfreemap.org/fonts/pm/{fontstack}/{range}.pbf'
-
-    data.sources.openmaptiles.url = 'https://tiles.openfreemap.org/planet'
-
-    let font
-    // font = 'Open Sans Regular'
-    font = 'Noto Sans Regular'
-    // font = 'Roboto Regular'
-
     for (const layer of data.layers) {
       delete layer.metadata
 
       const layout = layer.layout
 
-      if (layout?.['text-font']) {
-        // layout['text-font'] = [font]
-      }
+      // if (layout?.['text-font']) {
+      // layout['text-font'] = 'Noto Sans Regular
+      // }
 
       // if (layout?.visibility === 'visible') {
       //   delete layout.visibility

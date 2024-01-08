@@ -18,13 +18,21 @@
     "openmaptiles:version": "3.x"
   },
   "sources": {
+    "natural_earth": {
+      "maxzoom": 6,
+      "tileSize": 256,
+      "tiles": [
+        "https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
+      ],
+      "type": "raster"
+    },
     "openmaptiles": {
       "type": "vector",
-      "url": "https://demotiles.maplibre.org/tiles-omt/tiles.json"
+      "url": "https://tiles.openfreemap.org/planet"
     }
   },
   "sprite": "https://demotiles.maplibre.org/styles/osm-bright-gl-style/sprite",
-  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "glyphs": "https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
