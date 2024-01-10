@@ -132,7 +132,6 @@
     {
       "id": "tunnel_motorway_casing",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,
@@ -165,7 +164,6 @@
     {
       "id": "tunnel_motorway_inner",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,
@@ -197,7 +195,6 @@
     {
       "id": "aeroway-taxiway",
       "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "aeroway",
       "minzoom": 12,
@@ -220,7 +217,6 @@
     {
       "id": "aeroway-runway-casing",
       "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "aeroway",
       "minzoom": 11,
@@ -243,7 +239,6 @@
     {
       "id": "aeroway-area",
       "type": "fill",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "aeroway",
       "minzoom": 4,
@@ -260,7 +255,6 @@
     {
       "id": "aeroway-runway",
       "type": "line",
-      "metadata": {"mapbox:group": "1444849345966.4436"},
       "source": "openmaptiles",
       "source-layer": "aeroway",
       "minzoom": 11,
@@ -323,7 +317,6 @@
     {
       "id": "highway_path",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -349,7 +342,6 @@
     {
       "id": "highway_minor",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 8,
@@ -376,7 +368,6 @@
     {
       "id": "highway_major_casing",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 11,
@@ -409,7 +400,6 @@
     {
       "id": "highway_major_inner",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 11,
@@ -441,7 +431,6 @@
     {
       "id": "highway_major_subtle",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "maxzoom": 11,
@@ -462,7 +451,6 @@
     {
       "id": "highway_motorway_casing",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,
@@ -496,7 +484,6 @@
     {
       "id": "highway_motorway_inner",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,
@@ -536,7 +523,6 @@
     {
       "id": "highway_motorway_subtle",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "maxzoom": 6,
@@ -562,7 +548,6 @@
     {
       "id": "railway_transit",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 16,
@@ -581,7 +566,6 @@
     {
       "id": "railway_transit_dashline",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 16,
@@ -604,7 +588,6 @@
     {
       "id": "railway_service",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 16,
@@ -619,7 +602,6 @@
     {
       "id": "railway_service_dashline",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 16,
@@ -639,7 +621,6 @@
     {
       "id": "railway",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -665,7 +646,6 @@
     {
       "id": "railway_dashline",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -692,7 +672,6 @@
     {
       "id": "highway_motorway_bridge_casing",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,
@@ -726,7 +705,6 @@
     {
       "id": "highway_motorway_bridge_inner",
       "type": "line",
-      "metadata": {"mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"},
       "source": "openmaptiles",
       "source-layer": "transportation",
       "minzoom": 6,

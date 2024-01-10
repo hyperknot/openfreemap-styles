@@ -34,6 +34,8 @@ def cli(style_path):
     style['sprite'] = 'https://tiles.openfreemap.org/sprites/ofm_f384/ofm'
 
     for layer in style['layers']:
+        layer.pop('metadata', None)
+
         if 'layout' not in layer:
             continue
 
