@@ -12,7 +12,7 @@
       "url": "https://tiles.openfreemap.org/planet"
     }
   },
-  "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+  "sprite": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm",
   "glyphs": "https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf",
   "layers": [
     {

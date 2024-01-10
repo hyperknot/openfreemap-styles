@@ -21,12 +21,6 @@ def cli(style_path):
     style.pop('name', None)
     style.pop('metadata', None)
 
-    # # clean up metadata
-    # try:
-    #     style['metadata'] = {'mapbox:groups': style['metadata']['mapbox:groups']}
-    # except KeyError:
-    #     style.pop('metadata', None)
-
     style['sources'] = {
         'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},
         'ne2_shaded': {
@@ -37,6 +31,7 @@ def cli(style_path):
         },
     }
     style['glyphs'] = 'https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf'
+    style['sprite'] = 'https://tiles.openfreemap.org/sprites/ofm_f384/ofm'
 
     for layer in style['layers']:
         if 'layout' not in layer:
