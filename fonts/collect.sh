@@ -13,12 +13,10 @@ git_clone_or_update() {
     fi
 }
 
-rm -rf _collected
 
 git_clone_or_update https://github.com/maplibre/demotiles.git maplibre
 
-
+rm -rf _collected
 mkdir -p _collected/ofm
-
 cp -r maplibre/font/Noto* _collected/ofm
 

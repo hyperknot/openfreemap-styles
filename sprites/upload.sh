@@ -10,7 +10,6 @@ fi
 
 
 (cd sprites
-
   # loop through each subfolder and compress it into a tar file
   for folder in */; do
     base=$(basename "$folder")
