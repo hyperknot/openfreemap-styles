@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 
-import requests
-import os
-import yaml
-import json
 import itertools
+import json
+import os
+
+import requests
+import yaml
+
 
 def req(url):
-    return requests.get(url, headers={"Accept": "application/vnd.github.raw"})
+    return requests.get(url, headers={'Accept': 'application/vnd.github.raw'})
+
 
 def get_subclasses(values):
     subclasses = []
@@ -26,22 +29,27 @@ def get_subclasses(values):
 
     return subclasses
 
+
 def main():
-    if os.path.exists("iconset.json"):
-        with open("iconset.json", "r") as read_file:
+    if os.path.exists('iconset.json'):
+        with open('iconset.json') as read_file:
             iconset = json.load(read_file)
     else:
-        iconset = req('https://raw.githubusercontent.com/maputnik/osm-liberty/gh-pages/iconset.json').json()
+        iconset = req(
+            'https://raw.githubusercontent.com/maputnik/osm-liberty/gh-pages/iconset.json'
+        ).json()
     iconset_names = [list(group['svgs'].keys()) for group in iconset['iconGroups']]
     iconset_names = [item for sublist in iconset_names for item in sublist]
     # Remove the -11.svg and -15.svg from each name list to easily deduplicate
     iconset_names = list(set([x.replace('_11.svg', '').replace('.svg', '') for x in iconset_names]))
 
-    if os.path.exists("omt.yaml"):
-        with open("omt.yaml", "r") as read_file:
+    if os.path.exists('omt.yaml'):
+        with open('omt.yaml') as read_file:
             omt_poi = yaml.safe_load(read_file)
     else:
-        r = req('https://api.github.com/repos/openmaptiles/openmaptiles/contents/layers/poi/poi.yaml')
+        r = req(
+            'https://api.github.com/repos/openmaptiles/openmaptiles/contents/layers/poi/poi.yaml'
+        )
         omt_poi = yaml.safe_load(r.text)
     omt_poi_class = omt_poi['layer']['fields']['class']['values'].keys()
     omt_poi_subclass = get_subclasses(omt_poi['layer']['fields']['class']['values'].values())
@@ -50,8 +58,8 @@ def main():
     print('omt_poi_subclass=%s' % omt_poi_subclass)
     print()
 
-    if os.path.exists("maki.json"):
-        with open("maki.json", "r") as read_file:
+    if os.path.exists('maki.json'):
+        with open('maki.json') as read_file:
             maki_names = json.load(read_file)
     else:
         r = req('https://api.github.com/repos/mapbox/maki/contents/icons')
