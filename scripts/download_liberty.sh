@@ -17,6 +17,7 @@ rm -rf \
   _config.yml \
   sprites \
   build_sprites.sh \
-
+  sources_list.py \
+  iconset.json
 
 cp style.json maputnik_orig_linted.json
