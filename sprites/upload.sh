@@ -27,3 +27,7 @@ rclone copy \
   sprites cf:ofm-assets/sprites
 
 rm sprites/*.tgz
+
+(cd ../scripts
+ ./cloudflare_index.sh
+ )

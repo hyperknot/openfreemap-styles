@@ -28,3 +28,7 @@ rclone sync \
   _collected_gzip cf:ofm-assets/fonts
 
 rm -rf _collected_gzip
+
+(cd ../scripts
+ ./cloudflare_index.sh
+ )
