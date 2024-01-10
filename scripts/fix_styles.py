@@ -29,12 +29,10 @@ def cli(style_path):
 
     style['sources'] = {
         'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},
-        'natural_earth': {
+        'ne2_shaded': {
             'maxzoom': 6,
             'tileSize': 256,
-            'tiles': [
-                'https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png'
-            ],
+            'tiles': ['https://tiles.openfreemap.org/ne2_shaded/{z}/{x}/{y}.png'],
             'type': 'raster',
         },
     }

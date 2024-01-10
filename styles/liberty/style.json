@@ -1,12 +1,10 @@
 {
   "version": 8,
   "sources": {
-    "natural_earth": {
+    "ne2_shaded": {
       "maxzoom": 6,
       "tileSize": 256,
-      "tiles": [
-        "https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://tiles.openfreemap.org/ne2_shaded/{z}/{x}/{y}.png"],
       "type": "raster"
     },
     "openmaptiles": {
@@ -25,7 +23,7 @@
     {
       "id": "natural_earth",
       "type": "raster",
-      "source": "natural_earth",
+      "source": "ne2_shaded",
       "maxzoom": 7,
       "paint": {
         "raster-opacity": [
