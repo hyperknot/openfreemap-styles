@@ -8,8 +8,8 @@ let left, right
 
 left = await loadStyle('/styles/bright/style.json')
 
-// right = await loadStyle('/styles/positron/style.json')
-right = await loadStyle('/styles/liberty/style.json')
+right = await loadStyle('/styles/positron/style.json')
+// right = await loadStyle('/styles/liberty/style.json')
 
 // right = await loadStyle('/styles/positron/style.json')
 // right = await loadStyle('/styles/positron/omt_orig_linted.json')
