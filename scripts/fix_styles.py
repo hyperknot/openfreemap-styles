@@ -19,12 +19,13 @@ def cli(style_path):
         style = json.load(fp)
 
     style.pop('name', None)
+    style.pop('metadata', None)
 
-    # clean up metadata
-    try:
-        style['metadata'] = {'mapbox:groups': style['metadata']['mapbox:groups']}
-    except KeyError:
-        style.pop('metadata', None)
+    # # clean up metadata
+    # try:
+    #     style['metadata'] = {'mapbox:groups': style['metadata']['mapbox:groups']}
+    # except KeyError:
+    #     style.pop('metadata', None)
 
     style['sources'] = {
         'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},

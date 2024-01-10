@@ -1,18 +1,5 @@
 {
   "version": 8,
-  "metadata": {
-    "mapbox:groups": {
-      "101da9f13b64a08fa4b6ac1168e89e5f": {
-        "collapsed": false,
-        "name": "Places"
-      },
-      "a14c9607bc7954ba1df7205bf660433f": {"name": "Boundaries"},
-      "b6371a3f2f5a9932464fa3867530a2e5": {
-        "collapsed": false,
-        "name": "Transportation"
-      }
-    }
-  },
   "sources": {
     "natural_earth": {
       "maxzoom": 6,
