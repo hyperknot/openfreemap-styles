@@ -1,6 +1,6 @@
 target-version = "py310"
 line-length = 100
-extend-exclude = ["liberty"]
+extend-exclude = ["liberty_script"]
 
 select = [
   "E",   # pycodestyle errors
