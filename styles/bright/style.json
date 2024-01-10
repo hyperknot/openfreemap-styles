@@ -2453,11 +2453,11 @@
       }
     },
     {
-      "id": "poi_z16",
+      "id": "poi_r20",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "minzoom": 16,
+      "minzoom": 17,
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
@@ -2491,11 +2491,11 @@
       }
     },
     {
-      "id": "poi_z15",
+      "id": "poi_r7",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "minzoom": 15,
+      "minzoom": 16,
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
@@ -2530,11 +2530,11 @@
       }
     },
     {
-      "id": "poi_z14",
+      "id": "poi_r1",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "minzoom": 14,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
@@ -2582,6 +2582,7 @@
       ],
       "layout": {
         "icon-image": ["to-string", ["get", "class"]],
+        "icon-size": 0.7,
         "text-anchor": "left",
         "text-field": [
           "case",
