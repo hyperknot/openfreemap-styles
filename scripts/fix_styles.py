@@ -12,7 +12,7 @@ import click
 )
 def cli(style_path):
     """
-    Fixes OFM specific values in styles
+    Set OpenFreeMap specific values in styles
     """
 
     with open(style_path) as fp:

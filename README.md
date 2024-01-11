@@ -18,7 +18,7 @@ The long term goal of this project is to maintain a consistent style across thes
 
 Work is being done to make **Bright**, **Liberty** and **Positron** consistent. 
 
-The following is done, meaning they are identical, only differing in colors.
+Most of the work so far has been done in these areas:
 
 - all labels and text fields (water, roads, cities)
 - country and administrative borders
@@ -39,9 +39,9 @@ Part of this repo is a compare web app. Currently it works on localhost, but in 
 ### Scripts
 
 - **lint_styles.py** - removes unnecessary keys, runs gl-style-migrate, does recursive JSON sorting, outputs using gl-style-format and runs gl-style-validate
-- **copy_text_fields.py** - copies all text fields from a source style to a destination style (and removes existing ones)
-- **fix_text_fields.py** - copies all text fields from a source style to a destination style (and removes existing ones)
 - **lint.sh** does this for the whole repo, it should be used before every PR
+- **copy_text_fields.py** - copies all text fields from a source style to a destination style (and removes existing ones)
+- **fix_text_fields.py** - sets OpenFreeMap specific values in styles
 
 
 
@@ -51,12 +51,6 @@ Most tools used work on recent node versions, but fonts and sprites use tools wh
 
 
 
-### License
+## License
 
-Each style have their license in their subfolder.
-
-Code in this repo is MIT licensed.
-
-Fonts are not stored in this repo, their license should be the one in their original repo.
-
-Spritezero-cli is forked from https://github.com/mapbox/spritezero-cli, license is included.
+The license of this project is [MIT](https://www.tldrlegal.com/license/mit-license). Map data is from [OpenStreetMap](https://www.openstreetmap.org/copyright). The licenses for included projects are listed in [LICENSE.md](https://github.com/hyperknot/openfreemap/blob/main/LICENSE.md).
