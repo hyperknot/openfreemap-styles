@@ -3,6 +3,4 @@ node_modules
 
 /temp
 
-/_*
-/compare/_*
-/styles/_collected
+_collected

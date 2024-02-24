@@ -26,11 +26,11 @@ def cli(style_path):
         'ne2_shaded': {
             'maxzoom': 6,
             'tileSize': 256,
-            'tiles': ['https://tiles.openfreemap.org/ne2_shaded/{z}/{x}/{y}.png'],
+            'tiles': ['https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png'],
             'type': 'raster',
         },
     }
-    style['glyphs'] = 'https://tiles.openfreemap.org/fonts/ofm/{fontstack}/{range}.pbf'
+    style['glyphs'] = 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf'
     style['sprite'] = 'https://tiles.openfreemap.org/sprites/ofm_f384/ofm'
 
     for layer in style['layers']:

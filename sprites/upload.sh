@@ -9,6 +9,10 @@ if [ ! -f $RCLONE_CONFIG ]; then
 fi
 
 
+# creating archive which should be replicatable across runs
+# needs GNU tar for --mtime (brew install gnu-tar)
+
+
 (cd sprites
   # loop through each subfolder and compress it into a tar file
   for folder in */; do
@@ -21,7 +25,8 @@ fi
 
 rclone copy \
   --checksum \
-  -v \
+  --multi-thread-streams=8 \
+  -vP \
   --include "*.tar.gz" \
   sprites cf:ofm-assets/sprites
 
