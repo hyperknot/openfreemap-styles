@@ -5,6 +5,9 @@ from pathlib import Path
 import click
 
 
+DOMAIN = 'tiles.openfreemap.org'
+
+
 @click.command()
 @click.argument(
     'style_path',
@@ -22,16 +25,16 @@ def cli(style_path):
     style.pop('metadata', None)
 
     style['sources'] = {
-        'openmaptiles': {'type': 'vector', 'url': 'https://tiles.openfreemap.org/planet'},
+        'openmaptiles': {'type': 'vector', 'url': f'https://{DOMAIN}/planet'},
         'ne2_shaded': {
             'maxzoom': 6,
             'tileSize': 256,
-            'tiles': ['https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png'],
+            'tiles': [f'https://{DOMAIN}/natural_earth/ne2sr/{{z}}/{{x}}/{{y}}.png'],
             'type': 'raster',
         },
     }
-    style['glyphs'] = 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf'
-    style['sprite'] = 'https://tiles.openfreemap.org/sprites/ofm_f384/ofm'
+    style['glyphs'] = f'https://{DOMAIN}/fonts/{{fontstack}}/{{range}}.pbf'
+    style['sprite'] = f'https://{DOMAIN}/sprites/ofm_f384/ofm'
 
     for layer in style['layers']:
         layer.pop('metadata', None)
