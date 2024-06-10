@@ -46,6 +46,7 @@ def cli(style_path):
         if not text_field:
             continue
 
+        # highway numbers, etc.
         if text_field == ['to-string', ['get', 'ref']]:
             continue
 
