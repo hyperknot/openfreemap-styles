@@ -1,31 +1,33 @@
 #!/usr/bin/env bash
 set -e
 
-export RCLONE_CONFIG=../config/rclone.conf
+echo "not used, run in a cronjob on tile_gen server"
 
-if [ ! -f $RCLONE_CONFIG ]; then
-    echo "rclone.conf does not exist. Terminating."
-    exit 1
-fi
+# export RCLONE_CONFIG=../config/rclone.conf
 
-echo 'creating cloudflare index'
+# if [ ! -f $RCLONE_CONFIG ]; then
+#     echo "rclone.conf does not exist. Terminating."
+#     exit 1
+# fi
 
-rm -rf index
-mkdir index
+# echo 'creating cloudflare index'
 
-rclone lsf -R \
-  --files-only \
-  --fast-list \
-  --exclude dirs.txt \
-  --exclude index.txt \
-  cf:ofm-assets > index/index.txt
+# rm -rf index
+# mkdir index
 
-rclone lsf -R \
-  --dirs-only \
-  --dir-slash=false \
-  --fast-list \
-  cf:ofm-assets > index/dirs.txt
+# rclone lsf -R \
+#   --files-only \
+#   --fast-list \
+#   --exclude dirs.txt \
+#   --exclude index.txt \
+#   cf:ofm-assets > index/index.txt
 
-rclone copy index cf:ofm-assets
+# rclone lsf -R \
+#   --dirs-only \
+#   --dir-slash=false \
+#   --fast-list \
+#   cf:ofm-assets > index/dirs.txt
 
-rm -rf index
+# rclone copy index cf:ofm-assets
+
+# rm -rf index
