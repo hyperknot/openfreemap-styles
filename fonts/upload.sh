@@ -24,7 +24,3 @@ rclone copy \
   ofm.tar.gz cf:ofm-assets/fonts
 
 rm ofm.tar.gz
-
-(cd ../scripts
-./cloudflare_index.sh
-)

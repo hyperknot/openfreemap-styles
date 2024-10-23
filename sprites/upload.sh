@@ -32,6 +32,3 @@ rclone copy \
 
 rm sprites/*.tar.gz
 
-(cd ../scripts
- ./cloudflare_index.sh
- )

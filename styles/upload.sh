@@ -32,6 +32,3 @@ rclone copy \
 
 rm -rf _collected ofm.tar.gz
 
-(cd ../scripts
-./cloudflare_index.sh
-)
