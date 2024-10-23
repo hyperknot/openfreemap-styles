@@ -5,17 +5,17 @@
       "maxzoom": 6,
       "tileSize": 256,
       "tiles": [
-        "https://tiles.openfreemap.org/natural_earth/ne2sr/{z}/{x}/{y}.png"
+        "https://__TILEJSON_DOMAIN__/natural_earth/ne2sr/{z}/{x}/{y}.png"
       ],
       "type": "raster"
     },
     "openmaptiles": {
       "type": "vector",
-      "url": "https://tiles.openfreemap.org/planet"
+      "url": "https://__TILEJSON_DOMAIN__/planet"
     }
   },
-  "sprite": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm",
-  "glyphs": "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://__TILEJSON_DOMAIN__/sprites/ofm_f384/ofm",
+  "glyphs": "https://__TILEJSON_DOMAIN__/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
