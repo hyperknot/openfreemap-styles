@@ -24,13 +24,13 @@
       "maxzoom": 6,
       "tileSize": 256,
       "tiles": [
-        "https://tiles.openfreemap.org/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
+        "https://__TILEJSON_DOMAIN__/ne/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
       ],
       "type": "raster"
     },
     "openmaptiles": {
       "type": "vector",
-      "url": "https://tiles.openfreemap.org/planet"
+      "url": "https://__TILEJSON_DOMAIN__/planet"
     }
   },
   "sprite": "https://openmaptiles.github.io/dark-matter-gl-style/sprite",
