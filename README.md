@@ -16,7 +16,9 @@ This repo contains the forks of the following styles:
 
 **Dark** - forked from https://github.com/openmaptiles/dark-matter-gl-style
 
-All the OpenMapTiles styles (Bright, Positron, Dark) are abandoned by their upstream project. Liberty is fresh and alive. 
+**Fiord** - forked from https://github.com/openmaptiles/fiord-color-gl-style
+
+All the OpenMapTiles styles (Bright, Positron, Dark, Fiord) are abandoned by their upstream project. Liberty is fresh and alive. 
 
 The long term goal of this project is to maintain a consistent style across these forks. The plan is to split the styles to building blocks (like road layers, etc.) and build up new styles from these blocks.
 
@@ -30,7 +32,7 @@ Most of the work so far has been done in these areas:
 
 Positron, as a special clean looking style, has POIs removed and some highway labels set to show at higher zooms only.
 
-Dark is currently put on hold, it's very different from the rest. A better approach would be to try to invert Positron in a fitting color space.
+Dark and Fiord is not yet complete. They are supplied in their original form, which means, labels, etc. are not styled like the rest of the styles.
 
 
 
