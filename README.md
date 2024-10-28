@@ -32,7 +32,23 @@ Most of the work so far has been done in these areas:
 
 Positron, as a special clean looking style, has POIs removed and some highway labels set to show at higher zooms only.
 
-Dark and Fiord is not yet complete. They are supplied in their original form, which means, labels, etc. are not styled like the rest of the styles.
+Dark and Fiord is not yet complete. They are unmodified, which means they are exactly as they are on their source repo, with the only difference that fonts are set to Noto Sans.
+
+
+
+To access Dark and Fiord, use these URLs (these are not offered on the Quick Start guide for the moment):
+
+```
+https://tiles.openfreemap.org/styles/dark
+```
+
+and
+
+```
+https://tiles.openfreemap.org/styles/fiord
+```
+
+
 
 
 

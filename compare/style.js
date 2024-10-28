@@ -1,6 +1,10 @@
+const OFM_DOMAIN = 'tiles.openfreemap.org'
+
 export async function loadStyle(url) {
   const res = await fetch(url)
-  const data = await res.json()
+  const text = await res.text()
+  const modifiedText = text.replace(/__TILEJSON_DOMAIN__/g, OFM_DOMAIN)
+  const data = JSON.parse(modifiedText)
 
   delete data.bearing
   delete data.center
