@@ -15,6 +15,8 @@ mkdir -p _collected/ofm
 jq -c . bright/style.json > _collected/ofm/bright.json
 jq -c . liberty/style.json > _collected/ofm/liberty.json
 jq -c . positron/style.json > _collected/ofm/positron.json
+jq -c . dark/style.json > _collected/ofm/positron.json
+jq -c . fiord/style.json > _collected/ofm/positron.json
 
 # creating archive which should be replicatable across runs
 # needs GNU tar for --mtime (brew install gnu-tar)
