@@ -6,6 +6,9 @@ set -e
 ./fix_styles.py ../styles/liberty/style.json
 ./fix_styles.py ../styles/positron/style.json
 
+./fix_styles.py ../styles/dark/style.json
+./fix_styles.py ../styles/fiord/style.json
+
 
 #./fix_text_fields.py ../styles/bright/maphub.json > maphub
 #./fix_text_fields.py ../styles/bright/maplibre_orig_linted.json
