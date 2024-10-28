@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ ofm.tar.gz#!/usr/bin/env bash
 set -e
 
 export RCLONE_CONFIG=../config/rclone.conf
@@ -15,8 +15,13 @@ mkdir -p _collected/ofm
 jq -c . bright/style.json > _collected/ofm/bright.json
 jq -c . liberty/style.json > _collected/ofm/liberty.json
 jq -c . positron/style.json > _collected/ofm/positron.json
-jq -c . dark/style.json > _collected/ofm/positron.json
-jq -c . fiord/style.json > _collected/ofm/positron.json
+jq -c . dark/style.json > _collected/ofm/dark.json
+jq -c . fiord/style.json > _collected/ofm/fiord.json
+
+echo "Collected styles:"
+echo
+ls -1 _collected/ofm
+echo
 
 # creating archive which should be replicatable across runs
 # needs GNU tar for --mtime (brew install gnu-tar)
