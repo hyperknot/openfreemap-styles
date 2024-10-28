@@ -673,7 +673,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Medium Italic", "Noto Sans Italic"],
+        "text-font": ["Noto Sans Regular"],
         "text-rotation-alignment": "map",
         "text-size": 12
       },
@@ -703,7 +703,7 @@
           ["concat", ["get", "name:latin"], " ", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-max-angle": 30,
         "text-pitch-alignment": "viewport",
         "text-rotation-alignment": "map",
@@ -733,7 +733,7 @@
         "symbol-placement": "line",
         "symbol-spacing": 350,
         "text-field": ["to-string", ["get", "ref"]],
-        "text-font": ["Metropolis Light", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-pitch-alignment": "viewport",
         "text-rotation-alignment": "viewport",
         "text-size": 10,
@@ -846,7 +846,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "center",
         "text-offset": [0.5, 0],
         "text-size": 10,
@@ -879,7 +879,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "center",
         "text-offset": [0.5, 0],
         "text-size": 10,
@@ -912,7 +912,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
@@ -947,7 +947,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
@@ -981,7 +981,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 10,
@@ -1015,7 +1015,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-justify": "left",
         "text-offset": [0.5, 0.2],
         "text-size": 14,
@@ -1047,7 +1047,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": 10,
         "text-transform": "uppercase"
       },
@@ -1077,7 +1077,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Light Italic", "Noto Sans Italic"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 0, 9, 6, 11],
         "text-transform": "uppercase"
       },
@@ -1116,7 +1116,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 0, 10, 6, 12],
         "text-transform": "uppercase"
       },
@@ -1156,7 +1156,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": [
           "interpolate",
           ["exponential", 1.4],
@@ -1204,7 +1204,7 @@
           ["concat", ["get", "name:latin"], "\n", ["get", "name:nonlatin"]],
           ["coalesce", ["get", "name_en"], ["get", "name"]]
         ],
-        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": [
           "interpolate",
           ["exponential", 1.4],
