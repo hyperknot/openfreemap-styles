@@ -58,16 +58,7 @@
       "source-layer": "landuse",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Polygon"
-        ],
+        ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "commercial"]
       ],
       "paint": {"fill-color": "hsla(0,60%,87%,0.23)"}
@@ -79,16 +70,7 @@
       "source-layer": "landuse",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Polygon"
-        ],
+        ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "industrial"]
       ],
       "paint": {"fill-color": "hsla(49,100%,88%,0.34)"}
@@ -98,16 +80,7 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "park",
-      "filter": [
-        "==",
-        [
-          "case",
-          ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-          ["slice", ["geometry-type"], 5],
-          ["geometry-type"]
-        ],
-        "Polygon"
-      ],
+      "filter": ["==", ["geometry-type"], "Polygon"],
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": [
@@ -126,16 +99,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "park",
-      "filter": [
-        "==",
-        [
-          "case",
-          ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-          ["slice", ["geometry-type"], 5],
-          ["geometry-type"]
-        ],
-        "Polygon"
-      ],
+      "filter": ["==", ["geometry-type"], "Polygon"],
       "paint": {
         "line-color": [
           "interpolate",
@@ -544,16 +508,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["==", ["get", "brunnel"], "tunnel"],
@@ -796,16 +751,7 @@
       "minzoom": 4,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Polygon"
-        ],
+        ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["runway", "taxiway"], true, false]
       ],
       "paint": {
@@ -822,16 +768,7 @@
       "filter": [
         "all",
         ["match", ["get", "class"], ["taxiway"], true, false],
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ]
+        ["==", ["geometry-type"], "LineString"]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -857,16 +794,7 @@
       "filter": [
         "all",
         ["match", ["get", "class"], ["runway"], true, false],
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ]
+        ["==", ["geometry-type"], "LineString"]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -890,16 +818,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Polygon"
-        ],
+        ["==", ["geometry-type"], "Polygon"],
         ["==", ["get", "class"], "pier"]
       ],
       "paint": {"fill-antialias": true, "fill-color": "#f8f4f0"}
@@ -911,16 +830,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["match", ["get", "class"], ["pier"], true, false]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
@@ -944,16 +854,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Polygon"
-        ],
+        ["==", ["geometry-type"], "Polygon"],
         ["match", ["get", "class"], ["pier"], false, true]
       ],
       "paint": {
@@ -1036,16 +937,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["!=", ["get", "brunnel"], "tunnel"],
@@ -1201,16 +1093,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1302,16 +1185,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["!=", ["get", "brunnel"], "tunnel"],
@@ -1374,16 +1248,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1413,16 +1278,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1453,16 +1309,7 @@
       "minzoom": 5,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1492,16 +1339,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["==", ["get", "class"], "transit"],
@@ -1528,16 +1366,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["==", ["get", "class"], "transit"],
@@ -1567,16 +1396,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
       "paint": {
@@ -1599,16 +1419,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
       "paint": {
@@ -1634,16 +1445,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["!", ["has", "service"]],
@@ -1673,16 +1475,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["!", ["has", "service"]],
@@ -1858,16 +1651,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["==", ["get", "brunnel"], "bridge"],
@@ -1894,16 +1678,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "all",
           ["==", ["get", "brunnel"], "bridge"],
@@ -2335,16 +2110,7 @@
       "source": "openmaptiles",
       "source-layer": "waterway",
       "minzoom": 10,
-      "filter": [
-        "==",
-        [
-          "case",
-          ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-          ["slice", ["geometry-type"], 5],
-          ["geometry-type"]
-        ],
-        "LineString"
-      ],
+      "filter": ["==", ["geometry-type"], "LineString"],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
@@ -2370,16 +2136,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "water_name",
-      "filter": [
-        "==",
-        [
-          "case",
-          ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-          ["slice", ["geometry-type"], 5],
-          ["geometry-type"]
-        ],
-        "Point"
-      ],
+      "filter": ["==", ["geometry-type"], "Point"],
       "layout": {
         "text-field": [
           "case",
@@ -2403,16 +2160,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "water_name",
-      "filter": [
-        "==",
-        [
-          "case",
-          ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-          ["slice", ["geometry-type"], 5],
-          ["geometry-type"]
-        ],
-        "LineString"
-      ],
+      "filter": ["==", ["geometry-type"], "LineString"],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
@@ -2441,16 +2189,7 @@
       "minzoom": 16,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Point"
-        ],
+        ["==", ["geometry-type"], "Point"],
         [">=", ["get", "rank"], 20]
       ],
       "layout": {
@@ -2488,16 +2227,7 @@
       "minzoom": 15,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Point"
-        ],
+        ["==", ["geometry-type"], "Point"],
         [">=", ["get", "rank"], 7],
         ["<", ["get", "rank"], 20]
       ],
@@ -2536,16 +2266,7 @@
       "minzoom": 14,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "Point"
-        ],
+        ["==", ["geometry-type"], "Point"],
         [">=", ["get", "rank"], 1],
         ["<", ["get", "rank"], 7]
       ],
@@ -2642,16 +2363,7 @@
       "minzoom": 15,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["match", ["get", "class"], ["minor", "service", "track"], true, false]
       ],
       "layout": {
@@ -2712,16 +2424,7 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         [
           "match",
           ["get", "network"],
@@ -2751,16 +2454,7 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["match", ["get", "network"], ["us-interstate"], true, false]
       ],
       "layout": {
@@ -2789,16 +2483,7 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        [
-          "==",
-          [
-            "case",
-            ["==", ["slice", ["geometry-type"], 0, 5], "Multi"],
-            ["slice", ["geometry-type"], 5],
-            ["geometry-type"]
-          ],
-          "LineString"
-        ],
+        ["==", ["geometry-type"], "LineString"],
         ["match", ["get", "network"], ["us-highway", "us-state"], true, false]
       ],
       "layout": {
