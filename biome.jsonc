@@ -1,0 +1,64 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "files": {
+    "maxSize": 100000,
+    "ignoreUnknown": true,
+    "ignore": ["dist", ".venv", "*.json*"]
+  },
+  "organizeImports": {
+    "enabled": true,
+    "ignore": []
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        //        "noUselessElse": "off",
+        //        "noParameterAssign": "off",
+        //        "noArguments": "off"
+        "noNonNullAssertion": "off",
+        "useConst": "off"
+      },
+      "a11y": {
+        //        "useKeyWithClickEvents": "off",
+        //        "useValidAnchor": "off",
+        "useButtonType": "off"
+        //        "noBlankTarget": "off",
+        //        "noNoninteractiveTabindex": "off"
+      },
+      "security": {
+        //        "noDangerouslySetInnerHtml": "off"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off",
+        "noReactSpecificProps": "error"
+        //        "noArrayIndexKey": "off"
+      },
+      "complexity": {
+        // "noForEach": "off"
+      }
+    },
+    "ignore": []
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single"
+    }
+  },
+  "json": {
+    "formatter": {
+      //      "trailingCommas": "all",
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}

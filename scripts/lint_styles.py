@@ -57,6 +57,13 @@ def cli(styles_folder):
 
             print(p.stderr)
 
+            # upgrade to MapLibre v21 styles
+            p = subprocess.run(
+                ['node', 'scripts/upgrade_v21.js', style_file], capture_output=True, text=True
+            )
+            print(p.stdout)
+            print(p.stderr)
+
             # prettier
             subprocess.run(
                 [

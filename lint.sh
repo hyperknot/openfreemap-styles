@@ -5,4 +5,5 @@ ruff format .
 
 scripts/lint_styles.py styles
 
-pnpm prettier scripts -w
+pnpm biome check --write --unsafe scripts
+pnpm biome check --write --unsafe compare

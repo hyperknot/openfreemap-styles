@@ -4,7 +4,8 @@ import './style.css'
 import { setupMap } from './map.js'
 import { loadStyle } from './style.js'
 
-let left, right
+let left
+let right
 
 left = await loadStyle('/styles/fiord/style.json')
 
