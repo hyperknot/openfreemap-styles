@@ -55,6 +55,8 @@ def cli(styles_folder):
             with open(style_file, 'w') as fp:
                 fp.write(p.stdout)
 
+            print(p.stderr)
+
             # prettier
             subprocess.run(
                 [
