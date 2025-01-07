@@ -267,7 +267,7 @@
       "source": "openmaptiles",
       "source-layer": "aeroway",
       "minzoom": 11,
-      "filter": ["==", ["geometry-type"], "Polygon"],
+      "filter": ["==", "$type", "Polygon"],
       "paint": {"fill-color": "rgba(229, 228, 224, 1)", "fill-opacity": 0.7}
     },
     {
@@ -278,7 +278,7 @@
       "minzoom": 11,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["==", ["get", "class"], "runway"]
       ],
       "paint": {
@@ -302,7 +302,7 @@
       "minzoom": 11,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["==", ["get", "class"], "taxiway"]
       ],
       "paint": {
@@ -521,7 +521,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["==", ["get", "brunnel"], "tunnel"],
         ["match", ["get", "class"], ["path", "pedestrian"], true, false]
       ],
@@ -834,7 +834,7 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "filter": ["==", ["geometry-type"], "Polygon"],
+      "filter": ["==", "$type", "Polygon"],
       "paint": {"fill-pattern": "pedestrian_polygon"}
     },
     {
@@ -936,7 +936,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
         ["match", ["get", "class"], ["minor"], true, false],
         ["!=", ["get", "ramp"], 1]
@@ -1051,7 +1051,7 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
         ["match", ["get", "class"], ["path", "pedestrian"], true, false]
       ],
@@ -1169,7 +1169,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
         ["match", ["get", "class"], ["minor"], true, false]
       ],
@@ -1520,7 +1520,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["==", ["get", "brunnel"], "bridge"],
         ["match", ["get", "class"], ["path", "pedestrian"], true, false]
       ],
@@ -1626,7 +1626,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", ["geometry-type"], "LineString"],
+        ["==", "$type", "LineString"],
         ["==", ["get", "brunnel"], "bridge"],
         ["match", ["get", "class"], ["path", "pedestrian"], true, false]
       ],
@@ -2028,7 +2028,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "waterway",
-      "filter": ["==", ["geometry-type"], "LineString"],
+      "filter": ["==", "$type", "LineString"],
       "layout": {
         "symbol-placement": "line",
         "text-field": ["to-string", ["get", "name"]],
@@ -2047,7 +2047,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "water_name",
-      "filter": ["==", ["geometry-type"], "Point"],
+      "filter": ["==", "$type", "Point"],
       "layout": {
         "text-field": ["to-string", ["get", "name"]],
         "text-font": ["Roboto Regular"],
@@ -2068,7 +2068,7 @@
       "minzoom": 16,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "Point"],
+        ["==", "$type", "Point"],
         [">=", ["get", "rank"], 20]
       ],
       "layout": {
@@ -2101,7 +2101,7 @@
       "minzoom": 15,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "Point"],
+        ["==", "$type", "Point"],
         [">=", ["get", "rank"], 7],
         ["<", ["get", "rank"], 20]
       ],
@@ -2135,7 +2135,7 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["==", ["geometry-type"], "Point"],
+        ["==", "$type", "Point"],
         [">=", ["get", "rank"], 1],
         ["<", ["get", "rank"], 7]
       ],
