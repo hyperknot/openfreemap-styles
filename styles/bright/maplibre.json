@@ -58,7 +58,7 @@
       "source-layer": "landuse",
       "filter": [
         "all",
-        ["==", "$type", "Polygon"],
+        ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["==", ["get", "class"], "commercial"]
       ],
       "paint": {"fill-color": "hsla(0,60%,87%,0.23)"}
@@ -70,7 +70,7 @@
       "source-layer": "landuse",
       "filter": [
         "all",
-        ["==", "$type", "Polygon"],
+        ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["==", ["get", "class"], "industrial"]
       ],
       "paint": {"fill-color": "hsla(49,100%,88%,0.34)"}
@@ -80,7 +80,13 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "park",
-      "filter": ["==", "$type", "Polygon"],
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["MultiPolygon", "Polygon"],
+        true,
+        false
+      ],
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": [
@@ -99,7 +105,13 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "park",
-      "filter": ["==", "$type", "Polygon"],
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["MultiPolygon", "Polygon"],
+        true,
+        false
+      ],
       "paint": {
         "line-color": [
           "interpolate",
@@ -508,7 +520,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["==", ["get", "brunnel"], "tunnel"],
@@ -751,7 +769,7 @@
       "minzoom": 4,
       "filter": [
         "all",
-        ["==", "$type", "Polygon"],
+        ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["match", ["get", "class"], ["runway", "taxiway"], true, false]
       ],
       "paint": {
@@ -768,7 +786,13 @@
       "filter": [
         "all",
         ["match", ["get", "class"], ["taxiway"], true, false],
-        ["==", "$type", "LineString"]
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -794,7 +818,13 @@
       "filter": [
         "all",
         ["match", ["get", "class"], ["runway"], true, false],
-        ["==", "$type", "LineString"]
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -818,7 +848,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "Polygon"],
+        ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["==", ["get", "class"], "pier"]
       ],
       "paint": {"fill-antialias": true, "fill-color": "#f8f4f0"}
@@ -830,7 +860,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["match", ["get", "class"], ["pier"], true, false]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
@@ -854,7 +890,7 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "Polygon"],
+        ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["match", ["get", "class"], ["pier"], false, true]
       ],
       "paint": {
@@ -937,7 +973,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["!=", ["get", "brunnel"], "tunnel"],
@@ -1093,7 +1135,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1185,7 +1233,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["!=", ["get", "brunnel"], "tunnel"],
@@ -1248,7 +1302,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1278,7 +1338,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1309,7 +1375,13 @@
       "minzoom": 5,
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["match", ["get", "brunnel"], ["bridge", "tunnel"], false, true],
@@ -1339,7 +1411,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["==", ["get", "class"], "transit"],
@@ -1366,7 +1444,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["==", ["get", "class"], "transit"],
@@ -1396,7 +1480,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
       "paint": {
@@ -1419,7 +1509,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["all", ["==", ["get", "class"], "rail"], ["has", "service"]]
       ],
       "paint": {
@@ -1445,7 +1541,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["!", ["has", "service"]],
@@ -1475,7 +1577,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["!", ["has", "service"]],
@@ -1651,7 +1759,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["==", ["get", "brunnel"], "bridge"],
@@ -1678,7 +1792,13 @@
       "source-layer": "transportation",
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "all",
           ["==", ["get", "brunnel"], "bridge"],
@@ -2110,7 +2230,13 @@
       "source": "openmaptiles",
       "source-layer": "waterway",
       "minzoom": 10,
-      "filter": ["==", "$type", "LineString"],
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["LineString", "MultiLineString"],
+        true,
+        false
+      ],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
@@ -2136,7 +2262,13 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "water_name",
-      "filter": ["==", "$type", "Point"],
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["MultiPoint", "Point"],
+        true,
+        false
+      ],
       "layout": {
         "text-field": [
           "case",
@@ -2160,7 +2292,13 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "water_name",
-      "filter": ["==", "$type", "LineString"],
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["LineString", "MultiLineString"],
+        true,
+        false
+      ],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 350,
@@ -2189,7 +2327,7 @@
       "minzoom": 16,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
+        ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
         [">=", ["get", "rank"], 20]
       ],
       "layout": {
@@ -2227,7 +2365,7 @@
       "minzoom": 15,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
+        ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
         [">=", ["get", "rank"], 7],
         ["<", ["get", "rank"], 20]
       ],
@@ -2266,7 +2404,7 @@
       "minzoom": 14,
       "filter": [
         "all",
-        ["==", "$type", "Point"],
+        ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
         [">=", ["get", "rank"], 1],
         ["<", ["get", "rank"], 7]
       ],
@@ -2363,7 +2501,13 @@
       "minzoom": 15,
       "filter": [
         "all",
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["match", ["get", "class"], ["minor", "service", "track"], true, false]
       ],
       "layout": {
@@ -2424,7 +2568,13 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         [
           "match",
           ["get", "network"],
@@ -2454,7 +2604,13 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["match", ["get", "network"], ["us-interstate"], true, false]
       ],
       "layout": {
@@ -2483,7 +2639,13 @@
       "filter": [
         "all",
         ["<=", ["get", "ref_length"], 6],
-        ["==", "$type", "LineString"],
+        [
+          "match",
+          ["geometry-type"],
+          ["LineString", "MultiLineString"],
+          true,
+          false
+        ],
         ["match", ["get", "network"], ["us-highway", "us-state"], true, false]
       ],
       "layout": {
