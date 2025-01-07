@@ -6,4 +6,4 @@ ruff format .
 scripts/lint_styles.py styles
 
 pnpm biome check --write --unsafe scripts
-pnpm biome check --write --unsafe compare
+pnpm biome check --unsafe compare
