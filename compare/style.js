@@ -6,13 +6,13 @@ export async function loadStyle(url) {
   const modifiedText = text.replace(/__TILEJSON_DOMAIN__/g, OFM_DOMAIN)
   const data = JSON.parse(modifiedText)
 
-  data.bearing = undefined
-  data.center = undefined
-  data.zoom = undefined
-  data.pitch = undefined
-  data.metadata = undefined
-  data.name = undefined
-  data.id = undefined
+  delete data.bearing
+  delete data.center
+  delete data.zoom
+  delete data.pitch
+  delete data.metadata
+  delete data.name
+  delete data.id
 
   if (url.startsWith('/')) {
     for (const layer of data.layers) {
