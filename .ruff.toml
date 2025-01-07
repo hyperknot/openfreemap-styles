@@ -1,8 +1,10 @@
-target-version = "py310"
+target-version = "py312"
 line-length = 100
-extend-exclude = ["liberty_script"]
+extend-exclude = ["temp", "liberty_script"]
 
-select = [
+
+
+lint.select = [
   "E",   # pycodestyle errors
   "W",   # pycodestyle warnings
   "F",   # pyflakes
@@ -18,15 +20,17 @@ select = [
   'DTZ', # flake8-datetimez, https://beta.ruff.rs/docs/rules/#flake8-datetimez-dtz
 ]
 
-ignore = [
+lint.ignore = [
   'A003',
+  'DTZ007', # Naive datetime constructed using `datetime.datetime.strptime()` without %z
   'E501',
   'E711',
   'E712',
+  # 'E721', # type comparison
+  'E722',   # Do not use bare except
   'E741',
-  'F401', # unused imports
+  'F401',   # unused imports
   'F841',
-  'PT004',
   'SIM102',
   'SIM105',
   'SIM108',
@@ -36,9 +40,9 @@ ignore = [
 [format]
 quote-style = "single"
 
-[isort]
-known-first-party = ["ssh_lib"]
+[lint.isort]
+known-first-party = ["lib"]
 lines-after-imports = 2
 
-[flake8-comprehensions]
+[lint.flake8-comprehensions]
 allow-dict-calls-with-keyword-arguments = true
