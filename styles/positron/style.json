@@ -880,7 +880,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "boundary",
-      "minzoom": 8,
+      "minzoom": 2,
       "filter": [
         "all",
         [">=", ["get", "admin_level"], 3],
@@ -1367,7 +1367,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 5,
+      "minzoom": 3,
       "maxzoom": 8,
       "filter": ["==", ["get", "class"], "state"],
       "layout": {
