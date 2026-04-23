@@ -2301,6 +2301,7 @@
       "minzoom": 5,
       "filter": [
         "all",
+        ["==", ["typeof", ["get", "admin_level"]], "number"],
         [">=", ["get", "admin_level"], 3],
         ["<=", ["get", "admin_level"], 6],
         ["!=", ["get", "maritime"], 1],
