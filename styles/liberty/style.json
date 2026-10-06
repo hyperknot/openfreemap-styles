@@ -44,6 +44,13 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "park",
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["MultiPolygon", "Polygon"],
+        true,
+        false
+      ],
       "paint": {
         "fill-color": "#d8e8c8",
         "fill-opacity": 0.7,
@@ -55,6 +62,13 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "park",
+      "filter": [
+        "match",
+        ["geometry-type"],
+        ["MultiPolygon", "Polygon"],
+        true,
+        false
+      ],
       "paint": {
         "line-color": "rgba(228, 241, 215, 1)",
         "line-dasharray": [1, 1.5]
