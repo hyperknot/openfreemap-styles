@@ -2525,6 +2525,7 @@
       "filter": [
         "all",
         ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
+        ["==", ["typeof", ["get", "rank"]], "number"],
         [">=", ["get", "rank"], 20]
       ],
       "layout": {
@@ -2563,6 +2564,7 @@
       "filter": [
         "all",
         ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
+        ["==", ["typeof", ["get", "rank"]], "number"],
         [">=", ["get", "rank"], 7],
         ["<", ["get", "rank"], 20]
       ],
@@ -2602,6 +2604,7 @@
       "filter": [
         "all",
         ["match", ["geometry-type"], ["MultiPoint", "Point"], true, false],
+        ["==", ["typeof", ["get", "rank"]], "number"],
         [">=", ["get", "rank"], 1],
         ["<", ["get", "rank"], 7]
       ],
@@ -2765,6 +2768,7 @@
       "minzoom": 8,
       "filter": [
         "all",
+        ["==", ["typeof", ["get", "ref_length"]], "number"],
         ["<=", ["get", "ref_length"], 6],
         [
           "match",
@@ -2801,6 +2805,7 @@
       "minzoom": 7,
       "filter": [
         "all",
+        ["==", ["typeof", ["get", "ref_length"]], "number"],
         ["<=", ["get", "ref_length"], 6],
         [
           "match",
@@ -2836,6 +2841,7 @@
       "minzoom": 9,
       "filter": [
         "all",
+        ["==", ["typeof", ["get", "ref_length"]], "number"],
         ["<=", ["get", "ref_length"], 6],
         [
           "match",
@@ -3131,6 +3137,7 @@
       "filter": [
         "all",
         ["==", ["get", "class"], "country"],
+        ["==", ["typeof", ["get", "rank"]], "number"],
         [">=", ["get", "rank"], 3]
       ],
       "layout": {
