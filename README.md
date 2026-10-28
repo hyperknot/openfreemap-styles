@@ -71,7 +71,9 @@ Part of this repo is a compare styles web app. Currently it works on localhost, 
 
 Most tools used work on recent node versions, but fonts and sprites use tools which require node 12.
 
-
+In order for the scripts in `fonts/` and `sprites/` to work, you must
+have NVM installed and activated (as in the [standard node.js
+installation instructions](https://nodejs.org/en/download))
 
 ## Contributing
 

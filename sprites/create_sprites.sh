@@ -9,7 +9,7 @@ cp -r ../styles/liberty/svgs/svgs_not_in_iconset/ _tmp_src/
 cp -r ../styles/bright/icons_unique/ _tmp_src/
 
 (cd spritezero
-  source "$NVM_DIR/nvm.sh"
+  . "$NVM_DIR/nvm.sh"
   nvm use 12
   if [ ! -d node_modules ]; then
     npm i

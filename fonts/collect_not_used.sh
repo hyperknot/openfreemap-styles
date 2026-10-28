@@ -24,7 +24,7 @@ if [ ! -d openmaptiles/_output ]; then
   # generate openmaptiles PBFs
   # needs old node version 12, using nvm
   (cd openmaptiles
-    source "$NVM_DIR/nvm.sh"
+    . "$NVM_DIR/nvm.sh"
     nvm use 12
     npm i
     node generate.js)
@@ -48,5 +48,3 @@ mkdir _collected
 
 cp -r protomaps/fonts _collected/pm
 cp -r openmaptiles/_output _collected/omt
-
-

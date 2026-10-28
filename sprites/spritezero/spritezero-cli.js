@@ -14,7 +14,7 @@ function filepaths(dir) {
   return fs
     .readdirSync(dir)
     .filter(function (d) {
-      return !d.match(/^\./)
+      return !d.match(/^\./) && !fs.statSync(`${dir}/${d}`).isDirectory()
     })
     .map(function (d) {
       return path.join(dir, d)
